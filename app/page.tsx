@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { getAllPosts } from "@/lib/blog";
 
 const siteUrl = "https://www.leviathansellers.com/";
-const title = "Amazon FBA Reimbursement Recovery Service | Leviathan Sellers";
+const title = "Amazon FBA Reimbursement Recovery Service";
 const description =
   "Recover lost Amazon FBA reimbursements with expert daily auditing, manual claim filing, and manufacturing cost documentation. Serving FBA sellers in US, UK, India and Canada. 96% approval rate. Free audit — no obligation.";
 
