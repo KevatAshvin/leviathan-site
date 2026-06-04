@@ -113,6 +113,9 @@ export async function POST(request: Request) {
     );
   }
 
+  let gmailSent = false;
+  let webhookSent = false;
+
   if (gmailUser && gmailPass) {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -144,29 +147,43 @@ export async function POST(request: Request) {
       </p>
     `,
       });
+      gmailSent = true;
     } catch (error) {
       console.error("Gmail SMTP failed:", error);
-      return NextResponse.json(
-        { error: "Unable to submit your request right now. Please try again." },
-        { status: 502 },
-      );
     }
   }
 
+  // Webhook is best-effort only: its failure is logged but never surfaced to the
+  // user, so a successful Gmail send always yields a success response.
   if (webhookUrl) {
-    const webhookResponse = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(submission),
-    });
+    try {
+      const webhookResponse = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submission),
+      });
 
-    if (!webhookResponse.ok) {
-      console.error("Webhook failed:", webhookResponse.status, await webhookResponse.text().catch(() => ""));
-      return NextResponse.json(
-        { error: "Unable to submit your request right now. Please try again." },
-        { status: 502 },
-      );
+      if (webhookResponse.ok) {
+        webhookSent = true;
+      } else {
+        console.error(
+          "Webhook failed:",
+          webhookResponse.status,
+          await webhookResponse.text().catch(() => ""),
+        );
+      }
+    } catch (error) {
+      console.error("Webhook error:", error);
     }
+  }
+
+  // Only fail the request when no delivery channel succeeded (both unconfigured
+  // or both failed). Any single success returns 200.
+  if (!gmailSent && !webhookSent) {
+    return NextResponse.json(
+      { error: "Unable to submit your request right now. Please try again." },
+      { status: 503 },
+    );
   }
 
   return NextResponse.json({ ok: true });
