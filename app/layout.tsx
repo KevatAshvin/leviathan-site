@@ -109,6 +109,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "7j-CR0Hddtn0e8M6ktzJoS1q2zlrb9_oaPj1Da3a_a4",
+  },
   openGraph: {
     title: "Leviathan Sellers",
     description: siteDescription,
