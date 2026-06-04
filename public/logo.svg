@@ -1,0 +1,37 @@
+<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Leviathan Sellers</title>
+  <defs>
+    <linearGradient id="sunset" x1="23" y1="15" x2="78" y2="79" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD45A"/>
+      <stop offset="0.5" stop-color="#FF8A2A"/>
+      <stop offset="1" stop-color="#FF6B2B"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="15" y1="68" x2="76" y2="37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B345C"/>
+      <stop offset="0.45" stop-color="#1B6CA8"/>
+      <stop offset="1" stop-color="#BFEFFF"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="48" cy="48" r="42"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="48" cy="48" r="44" fill="#1B2D6B"/>
+  <g clip-path="url(#circleClip)">
+    <circle cx="48" cy="48" r="42" fill="url(#sunset)"/>
+    <path d="M7 69c10 13 27 21 45 19 14-2 26-9 36-20-15 6-30 7-43 1-9-4-15-10-19-18C22 59 16 65 7 69z" fill="#123E66"/>
+    <path d="M10 64c11 13 27 19 45 17 12-1 23-6 33-15-15 4-30 2-42-6-8-5-13-12-15-22-5 11-12 20-21 26z" fill="#1B6CA8"/>
+    <path d="M15 58c7-19 22-30 41-32 13-1 24 3 32 12-13-6-26-6-38 0-11 6-17 15-19 28-4-6-9-9-16-8z" fill="#DFF8FF"/>
+    <path d="M16 63c10-18 24-27 41-27 9 0 17 3 24 9-11-3-21-2-30 4-9 6-14 15-15 27-5-7-12-11-20-13z" fill="#0C4D78"/>
+    <path d="M25 47c12-14 27-18 45-11-12 1-21 5-27 12-5 6-7 13-6 21-5-9-9-15-12-22z" fill="#1B6CA8"/>
+    <path d="M35 31c14-7 28-6 41 3-12-3-23-1-32 6-7 5-12 12-14 22-2-13 0-23 5-31z" fill="#EAFBFF"/>
+    <path d="M46 31c8-3 16-2 24 2-8 0-15 2-20 7-4 3-7 8-8 15-2-9-1-17 4-24z" fill="#83D9F2"/>
+
+    <rect x="55" y="59" width="6" height="13" rx="1.5" fill="#1B2D6B"/>
+    <rect x="65" y="51" width="6" height="21" rx="1.5" fill="#1B2D6B"/>
+    <rect x="75" y="38" width="6" height="34" rx="1.5" fill="#1B2D6B"/>
+    <rect x="55" y="66" width="6" height="6" rx="1" fill="#FF6B2B"/>
+    <rect x="65" y="62" width="6" height="10" rx="1" fill="#FF6B2B"/>
+  </g>
+  <circle cx="48" cy="48" r="42" fill="none" stroke="#1B2D6B" stroke-width="3"/>
+</svg>

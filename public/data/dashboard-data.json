@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "generatedAt": "2025-05-23",
+    "totalSKUs": 8503,
+    "dataSpan": "Apr 2024 – Apr 2026",
+    "marketplace": "Amazon.com US",
+    "category": "General Book"
+  },
+  "financials": {
+    "avgManufacturingCostPerUnit": 3.85,
+    "avgSellingPricePerUnit": 10.50,
+    "totalReimbursedValueUSD": 2629,
+    "totalGRValueUSD": 2106,
+    "totalRecoveredValueUSD": 4735,
+    "potentialMissedIfUnmanaged": 11813,
+    "currencyNote": "Reimbursements at Amazon manufacturing cost (avg $3.85/unit). Units found values estimated at avg selling price. Missed value estimated on unmanaged discrepancy units."
+  },
+  "summary": {
+    "unitsShipped": 111605,
+    "unitsReceived": 104361,
+    "discrepancy": 7244,
+    "customerShipments": 92334,
+    "customerReturns": 4141,
+    "reimbursedQty": 683,
+    "grQty": 547,
+    "unitsFound": 960,
+    "unitsLost": 631,
+    "unitsDamaged": 65,
+    "unitsDisposed": 21,
+    "warehouseTransfers": 1557,
+    "endingWarehouseBalance": 13425
+  },
+  "statusBreakdown": {
+    "reconciledOK": 7538,
+    "needToCheck": 311,
+    "systemFlag": 256,
+    "inTransit": 394
+  },
+  "conditionMix": {
+    "new": 7312,
+    "used": 270,
+    "likeNew": 98,
+    "damaged": 82
+  },
+  "yearly": [
+    { "year": "2024", "skus": 1981, "shipped": 22154, "received": 22188, "receiveRate": 100.15, "reimbursed": 291, "lost": 186, "returns": 1088, "found": 301, "reconciledOK": 1877, "needToCheck": 78, "systemFlag": 23 },
+    { "year": "2025", "skus": 5195, "shipped": 67759, "received": 67506, "receiveRate": 99.63, "reimbursed": 377, "lost": 437, "returns": 2922, "found": 647, "reconciledOK": 4923, "needToCheck": 197, "systemFlag": 63 },
+    { "year": "2026", "skus": 1327, "shipped": 21692, "received": 14667, "receiveRate": 67.61, "reimbursed": 15, "lost": 8, "returns": 131, "found": 12, "reconciledOK": 738, "needToCheck": 36, "systemFlag": 170, "note": "Mar–Apr 2026 batches are in transit — low receive rate is expected" }
+  ],
+  "monthly": [
+    { "month": "2024-04", "label": "Apr 24", "skus": 97,  "shipped": 1670, "received": 1662, "receiveRate": 99.5, "reimbursed": 13, "lost": 15, "damaged": 0,  "returns": 134, "found": 22,  "reconciledOK": 87,  "needToCheck": 8  },
+    { "month": "2024-05", "label": "May 24", "skus": 97,  "shipped": 785,  "received": 781,  "receiveRate": 99.5, "reimbursed": 4,  "lost": 3,  "damaged": 2,  "returns": 24,  "found": 8,   "reconciledOK": 92,  "needToCheck": 2  },
+    { "month": "2024-06", "label": "Jun 24", "skus": 79,  "shipped": 1140, "received": 1131, "receiveRate": 99.2, "reimbursed": 7,  "lost": 9,  "damaged": 2,  "returns": 44,  "found": 19,  "reconciledOK": 74,  "needToCheck": 4  },
+    { "month": "2024-07", "label": "Jul 24", "skus": 25,  "shipped": 171,  "received": 171,  "receiveRate": 100.0,"reimbursed": 1,  "lost": 0,  "damaged": 0,  "returns": 7,   "found": 0,   "reconciledOK": 25,  "needToCheck": 0  },
+    { "month": "2024-08", "label": "Aug 24", "skus": 513, "shipped": 3915, "received": 3907, "receiveRate": 99.8, "reimbursed": 31, "lost": 19, "damaged": 2,  "returns": 206, "found": 30,  "reconciledOK": 495, "needToCheck": 12 },
+    { "month": "2024-09", "label": "Sep 24", "skus": 397, "shipped": 2926, "received": 2905, "receiveRate": 99.3, "reimbursed": 17, "lost": 32, "damaged": 0,  "returns": 108, "found": 36,  "reconciledOK": 387, "needToCheck": 9  },
+    { "month": "2024-10", "label": "Oct 24", "skus": 80,  "shipped": 492,  "received": 491,  "receiveRate": 99.8, "reimbursed": 3,  "lost": 5,  "damaged": 0,  "returns": 33,  "found": 3,   "reconciledOK": 79,  "needToCheck": 1  },
+    { "month": "2024-11", "label": "Nov 24", "skus": 315, "shipped": 4368, "received": 4479, "receiveRate": 102.5,"reimbursed": 171,"lost": 40, "damaged": 0,  "returns": 189, "found": 79,  "reconciledOK": 293, "needToCheck": 14 },
+    { "month": "2024-12", "label": "Dec 24", "skus": 378, "shipped": 6687, "received": 6661, "receiveRate": 99.6, "reimbursed": 44, "lost": 63, "damaged": 4,  "returns": 343, "found": 104, "reconciledOK": 345, "needToCheck": 28 },
+    { "month": "2025-01", "label": "Jan 25", "skus": 188, "shipped": 3316, "received": 3304, "receiveRate": 99.6, "reimbursed": 17, "lost": 26, "damaged": 1,  "returns": 137, "found": 29,  "reconciledOK": 175, "needToCheck": 11 },
+    { "month": "2025-02", "label": "Feb 25", "skus": 293, "shipped": 3654, "received": 3649, "receiveRate": 99.9, "reimbursed": 21, "lost": 27, "damaged": 17, "returns": 146, "found": 58,  "reconciledOK": 281, "needToCheck": 10 },
+    { "month": "2025-03", "label": "Mar 25", "skus": 294, "shipped": 4900, "received": 4869, "receiveRate": 99.4, "reimbursed": 24, "lost": 38, "damaged": 3,  "returns": 217, "found": 57,  "reconciledOK": 273, "needToCheck": 13 },
+    { "month": "2025-04", "label": "Apr 25", "skus": 335, "shipped": 3746, "received": 3736, "receiveRate": 99.7, "reimbursed": 20, "lost": 20, "damaged": 0,  "returns": 165, "found": 31,  "reconciledOK": 317, "needToCheck": 13 },
+    { "month": "2025-05", "label": "May 25", "skus": 408, "shipped": 6106, "received": 6016, "receiveRate": 98.5, "reimbursed": 37, "lost": 92, "damaged": 13, "returns": 303, "found": 159, "reconciledOK": 388, "needToCheck": 14 },
+    { "month": "2025-06", "label": "Jun 25", "skus": 635, "shipped": 5287, "received": 5279, "receiveRate": 99.8, "reimbursed": 46, "lost": 51, "damaged": 5,  "returns": 295, "found": 49,  "reconciledOK": 624, "needToCheck": 8  },
+    { "month": "2025-07", "label": "Jul 25", "skus": 603, "shipped": 8385, "received": 8370, "receiveRate": 99.8, "reimbursed": 56, "lost": 43, "damaged": 5,  "returns": 348, "found": 67,  "reconciledOK": 568, "needToCheck": 25 },
+    { "month": "2025-08", "label": "Aug 25", "skus": 530, "shipped": 6949, "received": 6940, "receiveRate": 99.9, "reimbursed": 41, "lost": 35, "damaged": 2,  "returns": 264, "found": 46,  "reconciledOK": 514, "needToCheck": 13 },
+    { "month": "2025-09", "label": "Sep 25", "skus": 435, "shipped": 5947, "received": 5922, "receiveRate": 99.6, "reimbursed": 36, "lost": 25, "damaged": 0,  "returns": 249, "found": 39,  "reconciledOK": 406, "needToCheck": 24 },
+    { "month": "2025-10", "label": "Oct 25", "skus": 434, "shipped": 6313, "received": 6307, "receiveRate": 99.9, "reimbursed": 44, "lost": 28, "damaged": 1,  "returns": 318, "found": 22,  "reconciledOK": 412, "needToCheck": 15 },
+    { "month": "2025-11", "label": "Nov 25", "skus": 491, "shipped": 7315, "received": 7299, "receiveRate": 99.8, "reimbursed": 24, "lost": 26, "damaged": 1,  "returns": 301, "found": 45,  "reconciledOK": 448, "needToCheck": 33 },
+    { "month": "2025-12", "label": "Dec 25", "skus": 549, "shipped": 5841, "received": 5815, "receiveRate": 99.6, "reimbursed": 11, "lost": 26, "damaged": 7,  "returns": 179, "found": 45,  "reconciledOK": 517, "needToCheck": 18 },
+    { "month": "2026-01", "label": "Jan 26", "skus": 251, "shipped": 3714, "received": 3705, "receiveRate": 99.8, "reimbursed": 9,  "lost": 0,  "damaged": 0,  "returns": 73,  "found": 2,   "reconciledOK": 220, "needToCheck": 18 },
+    { "month": "2026-02", "label": "Feb 26", "skus": 483, "shipped": 8282, "received": 8257, "receiveRate": 99.7, "reimbursed": 6,  "lost": 8,  "damaged": 0,  "returns": 58,  "found": 10,  "reconciledOK": 436, "needToCheck": 17 },
+    { "month": "2026-03", "label": "Mar 26", "skus": 209, "shipped": 2375, "received": 1485, "receiveRate": 62.5, "reimbursed": 0,  "lost": 0,  "damaged": 0,  "returns": 0,   "found": 0,   "reconciledOK": 47,  "needToCheck": 1,  "inTransit": true },
+    { "month": "2026-04", "label": "Apr 26", "skus": 384, "shipped": 7321, "received": 1220, "receiveRate": 16.7, "reimbursed": 0,  "lost": 0,  "damaged": 0,  "returns": 0,   "found": 0,   "reconciledOK": 35,  "needToCheck": 0,  "inTransit": true }
+  ]
+}
