@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://leviathansellers.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.leviathansellers.com";
 
 const today = new Date();
 

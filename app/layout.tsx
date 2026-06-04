@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://leviathansellers.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.leviathansellers.com";
 const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "";
 const contactEmail = "hello@leviathansellers.com";
 const contactNumber = "+91 92748 86403";
