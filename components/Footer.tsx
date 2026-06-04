@@ -5,7 +5,7 @@ import Logo from "@/components/Logo";
 
 const contactNumber = "+91 92748 86403";
 const whatsappUrl = "https://wa.me/919274886403";
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 const officeAddress = "K10, Near Genda Circle,\nVadodara, Gujarat 390007, India";
 
 const servicesLinks = [

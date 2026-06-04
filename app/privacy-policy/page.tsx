@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Leviathan Sellers",
+  title: "Privacy Policy",
   alternates: {
     canonical: "/privacy-policy",
   },
@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         <p className="mt-6 leading-8 text-[#374151]">
           We only use contact form details to respond to inquiries and provide
           requested services. We do not sell personal information. For data
-          deletion or privacy requests, contact hello@leviathansellers.com.
+          deletion or privacy requests, contact service@leviathansellers.com.
         </p>
       </div>
     </main>

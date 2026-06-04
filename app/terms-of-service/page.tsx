@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Leviathan Sellers",
+  title: "Terms of Service",
   alternates: {
     canonical: "/terms-of-service",
   },
@@ -21,7 +21,7 @@ export default function TermsOfServicePage() {
         <p className="mt-6 leading-8 text-[#374151]">
           Service scope, pricing, and deliverables are agreed in writing with each
           client. Reconciliation fees are performance-based unless otherwise
-          specified. Contact hello@leviathansellers.com for full contractual terms.
+          specified. Contact service@leviathansellers.com for full contractual terms.
         </p>
       </div>
     </main>

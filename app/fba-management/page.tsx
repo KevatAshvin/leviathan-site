@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 
 export const metadata: Metadata = {
-  title: "Amazon FBA Account Management — IPI Monitoring & Listing Health | Leviathan Sellers",
+  title: "Amazon FBA Account Management — IPI Monitoring & Listing Health",
   description:
     "Daily IPI score monitoring, listing health management, storage optimisation, and inventory replenishment planning for Amazon FBA sellers. Expert account management for US, UK, India and Canada.",
   keywords: [
@@ -22,6 +22,22 @@ export const metadata: Metadata = {
     "ipi score optimisation service",
   ],
   alternates: { canonical: "/fba-management" },
+  openGraph: {
+    title: "Amazon FBA Account Management — IPI Monitoring & Listing Health",
+    description:
+      "Daily IPI score monitoring, listing health management, storage optimisation, and inventory replenishment planning for Amazon FBA sellers. Expert account management for US, UK, India and Canada.",
+    url: "/fba-management",
+    siteName: "Leviathan Sellers",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon FBA Account Management — IPI Monitoring & Listing Health",
+    description:
+      "Daily IPI score monitoring, listing health management, storage optimisation, and inventory replenishment planning for Amazon FBA sellers. Expert account management for US, UK, India and Canada.",
+    images: ["/og-image.png"],
+  },
 };
 
 const breadcrumbJsonLd = {

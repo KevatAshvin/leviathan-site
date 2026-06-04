@@ -3,14 +3,14 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "./ContactForm";
 
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 const contactNumber = "+91 92748 86403";
 const whatsappUrl = "https://wa.me/919274886403";
 const officeAddress = `K10, Near Genda Circle,
 Vadodara, Gujarat 390007, India`;
 
 export const metadata: Metadata = {
-  title: "Get Your Free Amazon FBA Audit | Leviathan Sellers",
+  title: "Get Your Free Amazon FBA Audit",
   description:
     "Request a free Amazon FBA account audit. Our expert team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome. WhatsApp available.",
   keywords: [
@@ -24,6 +24,22 @@ export const metadata: Metadata = {
     "amazon fba expert consultation",
   ],
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Get Your Free Amazon FBA Audit",
+    description:
+      "Request a free Amazon FBA account audit. Our expert team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome. WhatsApp available.",
+    url: "/contact",
+    siteName: "Leviathan Sellers",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Get Your Free Amazon FBA Audit",
+    description:
+      "Request a free Amazon FBA account audit. Our expert team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome. WhatsApp available.",
+    images: ["/og-image.png"],
+  },
 };
 
 const contactRows = [
@@ -70,7 +86,7 @@ const localBusinessJsonLd = {
   "@type": "LocalBusiness",
   name: "Leviathan Sellers",
   url: "https://leviathansellers.com",
-  email: "hello@leviathansellers.com",
+  email: "service@leviathansellers.com",
   telephone: "+919274886403",
   address: {
     "@type": "PostalAddress",

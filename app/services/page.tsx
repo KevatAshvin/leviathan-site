@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 
 export const metadata: Metadata = {
-  title: "Amazon FBA Services — Reimbursement, Account Management & Research | Leviathan Sellers",
+  title: "Amazon FBA Services — Reimbursement, Account Management & Research",
   description:
     "Expert Amazon FBA services: reimbursement recovery with manual filing, daily account health management, and data-driven product research. Serving sellers in US, UK, India and Canada. Free audit with no obligation.",
   keywords: [
@@ -21,6 +21,22 @@ export const metadata: Metadata = {
     "amazon fba expert",
   ],
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Amazon FBA Services — Reimbursement, Account Management & Research",
+    description:
+      "Expert Amazon FBA services: reimbursement recovery with manual filing, daily account health management, and data-driven product research. Serving sellers in US, UK, India and Canada. Free audit with no obligation.",
+    url: "/services",
+    siteName: "Leviathan Sellers",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon FBA Services — Reimbursement, Account Management & Research",
+    description:
+      "Expert Amazon FBA services: reimbursement recovery with manual filing, daily account health management, and data-driven product research. Serving sellers in US, UK, India and Canada. Free audit with no obligation.",
+    images: ["/og-image.png"],
+  },
 };
 
 const services = [

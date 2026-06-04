@@ -31,7 +31,7 @@ const serviceOptions = [
 ];
 
 const requiredFields = ["name", "email", "marketplace", "service"] as const;
-const FALLBACK_EMAIL = "hello@leviathansellers.com";
+const FALLBACK_EMAIL = "service@leviathansellers.com";
 
 type RequiredField = (typeof requiredFields)[number];
 type Errors = Partial<Record<RequiredField | "submit", string>>;

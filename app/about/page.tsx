@@ -8,14 +8,14 @@ const founderYear = "2023";
 const founderCity = "Vadodara";
 const founderCountry = "India";
 const founderLocation = `${founderCity}, ${founderCountry}`;
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 const contactNumber = "+91 92748 86403";
 const whatsappUrl = "https://wa.me/919274886403";
 const officeAddress = `K10, Near Genda Circle,
 Vadodara, Gujarat 390007, India`;
 
 export const metadata: Metadata = {
-  title: "About Leviathan Sellers | Amazon FBA Experts — Vadodara, India",
+  title: "Amazon FBA Experts — Vadodara, India",
   description:
     "Leviathan Sellers is an Amazon FBA services company founded in Vadodara, India. We help sellers in the US, UK, India and Canada recover FBA reimbursements, manage account health, and research winning products — with 100% manual expert filing.",
   keywords: [
@@ -31,6 +31,22 @@ export const metadata: Metadata = {
     "amazon fba services india",
   ],
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "Amazon FBA Experts — Vadodara, India",
+    description:
+      "Leviathan Sellers is an Amazon FBA services company founded in Vadodara, India. We help sellers in the US, UK, India and Canada recover FBA reimbursements, manage account health, and research winning products — with 100% manual expert filing.",
+    url: "/about",
+    siteName: "Leviathan Sellers",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon FBA Experts — Vadodara, India",
+    description:
+      "Leviathan Sellers is an Amazon FBA services company founded in Vadodara, India. We help sellers in the US, UK, India and Canada recover FBA reimbursements, manage account health, and research winning products — with 100% manual expert filing.",
+    images: ["/og-image.png"],
+  },
 };
 
 const glanceItems = [

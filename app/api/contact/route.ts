@@ -127,7 +127,7 @@ export async function POST(request: Request) {
     try {
       await transporter.sendMail({
         from: `"Leviathan Sellers Contact" <${gmailUser}>`,
-        to: "hello@leviathansellers.com",
+        to: "service@leviathansellers.com",
         replyTo: submission.email,
         subject: `New Audit Request — ${submission.name} (${submission.marketplace})`,
         html: `

@@ -3,10 +3,10 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReconciliationFaq from "./ReconciliationFaq";
 
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 
 export const metadata: Metadata = {
-  title: "Amazon FBA Reconciliation & Reimbursement Recovery | Leviathan Sellers",
+  title: "Amazon FBA Reconciliation & Reimbursement Recovery",
   description:
     "Daily Amazon FBA reconciliation — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing cost documentation. Free audit for US, UK, India and Canada sellers.",
   keywords: [
@@ -24,6 +24,22 @@ export const metadata: Metadata = {
     "fba damaged inventory claim",
   ],
   alternates: { canonical: "/reconciliation" },
+  openGraph: {
+    title: "Amazon FBA Reconciliation & Reimbursement Recovery",
+    description:
+      "Daily Amazon FBA reconciliation — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing cost documentation. Free audit for US, UK, India and Canada sellers.",
+    url: "/reconciliation",
+    siteName: "Leviathan Sellers",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon FBA Reconciliation & Reimbursement Recovery",
+    description:
+      "Daily Amazon FBA reconciliation — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing cost documentation. Free audit for US, UK, India and Canada sellers.",
+    images: ["/og-image.png"],
+  },
 };
 
 const breadcrumbJsonLd = {

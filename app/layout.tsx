@@ -14,7 +14,7 @@ const inter = Inter({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.leviathansellers.com";
 const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "";
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 const contactNumber = "+91 92748 86403";
 const founderName = "Harishchandra Kevat";
 const officeAddress = {

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const contactEmail = "hello@leviathansellers.com";
+const contactEmail = "service@leviathansellers.com";
 
 export const metadata: Metadata = {
-  title: "Amazon Product Research Service — US, UK & India | Leviathan Sellers",
+  title: "Amazon Product Research Service — US, UK & India",
   description:
     "Data-driven Amazon product research for US, UK, and India marketplaces. Keyword demand analysis, competition depth, margin modelling, and supplier identification. Find winning products before the competition.",
   keywords: [
@@ -22,6 +22,22 @@ export const metadata: Metadata = {
     "amazon supplier research",
   ],
   alternates: { canonical: "/product-research" },
+  openGraph: {
+    title: "Amazon Product Research Service — US, UK & India",
+    description:
+      "Data-driven Amazon product research for US, UK, and India marketplaces. Keyword demand analysis, competition depth, margin modelling, and supplier identification. Find winning products before the competition.",
+    url: "/product-research",
+    siteName: "Leviathan Sellers",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon Product Research Service — US, UK & India",
+    description:
+      "Data-driven Amazon product research for US, UK, and India marketplaces. Keyword demand analysis, competition depth, margin modelling, and supplier identification. Find winning products before the competition.",
+    images: ["/og-image.png"],
+  },
 };
 
 const breadcrumbJsonLd = {
