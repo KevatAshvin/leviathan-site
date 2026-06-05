@@ -85,7 +85,7 @@ const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Leviathan Sellers",
-  url: "https://leviathansellers.com",
+  url: "https://www.leviathansellers.com",
   email: "service@leviathansellers.com",
   telephone: "+919274886403",
   address: {

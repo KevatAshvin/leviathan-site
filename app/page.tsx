@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
+import FaqJsonLd from "@/components/FaqJsonLd";
+import { homeFaqs } from "@/components/faq-data";
 import HeroDashboard from "@/components/HeroDashboard";
 import ReconciliationDashboard from "@/components/ReconciliationDashboard";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -58,10 +60,10 @@ export const metadata: Metadata = {
 };
 
 const trustStats = [
-  { value: "111,605", label: "Units audited" },
-  { value: "683", label: "Claims filed" },
-  { value: "$4,735", label: "Total value recovered" },
+  { value: "Daily", label: "Audit frequency" },
   { value: "96%", label: "Claim approval rate" },
+  { value: "$130–$500", label: "Monthly recovery per client" },
+  { value: "60-day", label: "Window tracked, every claim" },
 ];
 
 const problemCards = [
@@ -594,6 +596,7 @@ export default async function Home() {
                 Common Questions from FBA Sellers
               </h2>
             </div>
+            <FaqJsonLd faqs={homeFaqs} />
             <FaqAccordion />
           </ScrollReveal>
         </div>

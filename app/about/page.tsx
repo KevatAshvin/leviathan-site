@@ -131,7 +131,7 @@ const personJsonLd = {
   worksFor: {
     "@type": "Organization",
     name: "Leviathan Sellers",
-    url: "https://leviathansellers.com",
+    url: "https://www.leviathansellers.com",
   },
   address: {
     "@type": "PostalAddress",

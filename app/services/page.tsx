@@ -157,8 +157,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://leviathansellers.com/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://leviathansellers.com/services" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.leviathansellers.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.leviathansellers.com/services" },
   ],
 };
 
@@ -173,7 +173,7 @@ const servicesListJsonLd = {
       item: {
         "@type": "Service",
         name: "FBA Reconciliation & Reimbursement Recovery",
-        url: "https://leviathansellers.com/reconciliation",
+        url: "https://www.leviathansellers.com/reconciliation",
         description: "Daily Amazon FBA reconciliation with manual expert claim filing within the 60-day window.",
       },
     },
@@ -183,7 +183,7 @@ const servicesListJsonLd = {
       item: {
         "@type": "Service",
         name: "FBA Account Management",
-        url: "https://leviathansellers.com/fba-management",
+        url: "https://www.leviathansellers.com/fba-management",
         description: "Daily IPI monitoring, listing health management, storage optimisation and inventory planning.",
       },
     },
@@ -193,7 +193,7 @@ const servicesListJsonLd = {
       item: {
         "@type": "Service",
         name: "Amazon Product Research",
-        url: "https://leviathansellers.com/product-research",
+        url: "https://www.leviathansellers.com/product-research",
         description: "Data-driven product research for Amazon US, UK and India with margin modelling.",
       },
     },

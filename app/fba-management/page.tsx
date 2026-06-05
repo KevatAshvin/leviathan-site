@@ -48,19 +48,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://leviathansellers.com/",
+      item: "https://www.leviathansellers.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Services",
-      item: "https://leviathansellers.com/services",
+      item: "https://www.leviathansellers.com/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "FBA Account Management",
-      item: "https://leviathansellers.com/fba-management",
+      item: "https://www.leviathansellers.com/fba-management",
     },
   ],
 };
@@ -72,7 +72,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Leviathan Sellers",
-    url: "https://leviathansellers.com",
+    url: "https://www.leviathansellers.com",
   },
   description:
     "Daily IPI score monitoring, listing health management, storage optimisation, and inventory replenishment planning for Amazon FBA sellers.",

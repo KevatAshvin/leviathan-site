@@ -48,19 +48,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://leviathansellers.com/",
+      item: "https://www.leviathansellers.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Services",
-      item: "https://leviathansellers.com/services",
+      item: "https://www.leviathansellers.com/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Product Research",
-      item: "https://leviathansellers.com/product-research",
+      item: "https://www.leviathansellers.com/product-research",
     },
   ],
 };
@@ -72,7 +72,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Leviathan Sellers",
-    url: "https://leviathansellers.com",
+    url: "https://www.leviathansellers.com",
   },
   description:
     "Data-driven Amazon product research for US, UK, and India. Keyword demand, competition depth, margin modelling, and supplier identification.",

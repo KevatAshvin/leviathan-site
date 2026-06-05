@@ -50,19 +50,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://leviathansellers.com/",
+      item: "https://www.leviathansellers.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Services",
-      item: "https://leviathansellers.com/services",
+      item: "https://www.leviathansellers.com/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "FBA Reconciliation",
-      item: "https://leviathansellers.com/reconciliation",
+      item: "https://www.leviathansellers.com/reconciliation",
     },
   ],
 };
@@ -74,7 +74,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Leviathan Sellers",
-    url: "https://leviathansellers.com",
+    url: "https://www.leviathansellers.com",
   },
   description:
     "Daily Amazon FBA reconciliation with manual expert claim filing within the 60-day window. Full manufacturing cost documentation included. Performance-based pricing — pay only when we recover.",

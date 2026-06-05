@@ -16,12 +16,13 @@ type FaqSectionProps = {
 };
 
 /**
- * Renders an accessible FAQ accordion AND emits FAQPage structured data
- * (schema.org) so Google can surface answers as rich results / "People Also Ask".
+ * Renders an accessible FAQ accordion.
  *
- * One source of truth: the same `faqs` array drives both the visible UI and the
- * JSON-LD, so the structured data can never drift from what users actually see
- * (a Google requirement — mismatched FAQ schema can trigger a manual action).
+ * FAQPage structured data (schema.org) is emitted separately by the server-side
+ * `FaqJsonLd` component so Google can reliably parse it for rich results — the
+ * same `faqs` array should drive both, keeping the structured data in sync with
+ * what users actually see (a Google requirement — mismatched FAQ schema can
+ * trigger a manual action).
  */
 export default function FaqSection({
   idPrefix,
@@ -30,29 +31,8 @@ export default function FaqSection({
 }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState(defaultOpenIndex);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        // Escape "<" to prevent breaking out of the script tag (XSS-safe).
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
-        }}
-      />
-      <div className="divide-y divide-[#E2E8F0]">
+    <div className="divide-y divide-[#E2E8F0]">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           const buttonId = `${idPrefix}-faq-button-${index}`;
@@ -88,7 +68,6 @@ export default function FaqSection({
             </article>
           );
         })}
-      </div>
-    </>
+    </div>
   );
 }

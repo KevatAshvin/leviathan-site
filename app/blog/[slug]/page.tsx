@@ -73,7 +73,7 @@ export async function generateMetadata({
       "amazon seller",
     ],
     authors: [
-      { name: "Harishchandra Kevat", url: "https://leviathansellers.com/about" },
+      { name: "Harishchandra Kevat", url: "https://www.leviathansellers.com/about" },
     ],
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     publisher: {
       "@type": "Organization",
       name: "Leviathan Sellers",
-      url: "https://leviathansellers.com",
+      url: "https://www.leviathansellers.com",
     },
   };
 

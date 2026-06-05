@@ -6,7 +6,7 @@ const title =
   "Free Amazon FBA Calculator 2025 | US, UK & India";
 const description =
   "Calculate Amazon FBA fees, referral fees, size tier costs and net profit instantly for Amazon US, UK and India. Updated 2025 fee schedules. Free — no login required.";
-const url = "https://leviathansellers.com/fba-calculator";
+const url = "https://www.leviathansellers.com/fba-calculator";
 
 export const metadata: Metadata = {
   title,
@@ -92,7 +92,7 @@ const jsonLdGraph = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://leviathansellers.com/",
+          item: "https://www.leviathansellers.com/",
         },
         {
           "@type": "ListItem",
