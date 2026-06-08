@@ -32,6 +32,14 @@ export async function generateMetadata({
   }
 
   const categoryKeywords: Record<string, string[]> = {
+    "AI & Automation": [
+      "ai tools for amazon fba sellers",
+      "ai for amazon sellers 2025",
+      "amazon fba ai automation",
+      "ai amazon reimbursement tools",
+      "best ai tools for amazon sellers",
+      "ai amazon product research",
+    ],
     "FBA Policy": [
       "amazon fba reimbursement policy 2025",
       "amazon fba policy changes 2025",

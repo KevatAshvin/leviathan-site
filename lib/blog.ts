@@ -1,4 +1,7 @@
 import type { ComponentType } from "react";
+import AiToolsForAmazonFbaSellers2025, {
+  frontmatter as aiToolsForAmazonFbaSellers2025,
+} from "@/content/blog/ai-tools-for-amazon-fba-sellers-2025.mdx";
 import AmazonFbaReimbursementPolicy2025, {
   frontmatter as amazonFbaReimbursementPolicy2025,
 } from "@/content/blog/amazon-fba-reimbursement-policy-2025.mdx";
@@ -11,6 +14,9 @@ import FreeAuditPreparation, {
 import HowToImproveAmazonIpiScore, {
   frontmatter as howToImproveAmazonIpiScore,
 } from "@/content/blog/how-to-improve-amazon-ipi-score.mdx";
+import HowToRecoverAmazonFbaReimbursements2025, {
+  frontmatter as howToRecoverAmazonFbaReimbursements2025,
+} from "@/content/blog/how-to-recover-amazon-fba-reimbursements-2025.mdx";
 import SettlementReconciliation, {
   frontmatter as settlementReconciliation,
 } from "@/content/blog/settlement-reconciliation.mdx";
@@ -28,6 +34,11 @@ export type BlogPost = {
 
 const posts: BlogPost[] = [
   {
+    slug: "ai-tools-for-amazon-fba-sellers-2025",
+    ...aiToolsForAmazonFbaSellers2025,
+    Component: AiToolsForAmazonFbaSellers2025,
+  },
+  {
     slug: "amazon-fba-reimbursement-policy-2025",
     ...amazonFbaReimbursementPolicy2025,
     Component: AmazonFbaReimbursementPolicy2025,
@@ -36,6 +47,11 @@ const posts: BlogPost[] = [
     slug: "how-to-improve-amazon-ipi-score",
     ...howToImproveAmazonIpiScore,
     Component: HowToImproveAmazonIpiScore,
+  },
+  {
+    slug: "how-to-recover-amazon-fba-reimbursements-2025",
+    ...howToRecoverAmazonFbaReimbursements2025,
+    Component: HowToRecoverAmazonFbaReimbursements2025,
   },
   {
     slug: "fba-reimbursement-audit",
