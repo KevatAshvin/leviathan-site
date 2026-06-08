@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import FaqJsonLd from "@/components/FaqJsonLd";
 import FaqSection from "@/components/FaqSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import { formatPostDate, getAllPosts, getPostBySlug } from "@/lib/blog";
@@ -161,26 +162,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Component />
                 </div>
                 {post.faqs && post.faqs.length > 0 ? (
-                  <section
-                    aria-labelledby={`blog-${slug}-faq-title`}
-                    className="mt-16 border-t border-[#E2E8F0] pt-10"
-                  >
-                    <h2
-                      id={`blog-${slug}-faq-title`}
-                      className="text-2xl font-bold tracking-tight text-[#0F172A]"
+                  <>
+                    <FaqJsonLd faqs={post.faqs} />
+                    <section
+                      aria-labelledby={`blog-${slug}-faq-title`}
+                      className="mt-16 border-t border-[#E2E8F0] pt-10"
                     >
-                      Frequently asked questions
-                    </h2>
-                    <div className="mt-6">
-                      <FaqSection idPrefix={`blog-${slug}`} faqs={post.faqs} />
-                    </div>
-                  </section>
+                      <h2
+                        id={`blog-${slug}-faq-title`}
+                        className="text-2xl font-bold tracking-tight text-[#0F172A]"
+                      >
+                        Frequently asked questions
+                      </h2>
+                      <div className="mt-6">
+                        <FaqSection idPrefix={`blog-${slug}`} faqs={post.faqs} />
+                      </div>
+                    </section>
+                  </>
                 ) : null}
               </article>
             </ScrollReveal>
 
-            <aside className="hidden lg:block">
-              <div className="sticky top-24 rounded-2xl border border-[#FED7AA] bg-[#FFF7ED] p-6">
+            <aside>
+              <div className="rounded-2xl border border-[#FED7AA] bg-[#FFF7ED] p-6 lg:sticky lg:top-24">
                 <h2 className="text-lg font-bold text-[#0F172A]">
                   Recover missing Amazon FBA revenue
                 </h2>
@@ -197,24 +201,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </aside>
           </div>
-
-          <ScrollReveal>
-            <section className="mt-16 rounded-2xl border border-[#FED7AA] bg-[#FFF7ED] p-8 lg:hidden">
-              <h2 className="text-xl font-bold text-[#0F172A]">
-                Recover missing Amazon FBA revenue
-              </h2>
-              <p className="mt-3 text-[#64748B]">
-                Leviathan Sellers helps Amazon businesses identify reimbursement and
-                reconciliation opportunities with clear audit findings.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-5 inline-flex rounded-xl bg-[#F97316] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#EA580C]"
-              >
-                Get Free Audit →
-              </Link>
-            </section>
-          </ScrollReveal>
         </div>
       </main>
     </>
