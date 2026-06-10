@@ -111,3 +111,21 @@ video {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Never hide content from clients that do not run JS (crawlers, no-script
+   users). The reveal animation is a progressive enhancement only. */
+@media (scripting: none) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Respect reduced-motion: show content without the translate/fade animation. */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

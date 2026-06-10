@@ -57,6 +57,14 @@ const nextConfig: NextConfig = {
 
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
+  options: {
+    // GitHub Flavored Markdown — needed so tables, strikethrough, and
+    // autolinks in blog posts render as real HTML instead of literal text.
+    // Specified as a string (not an imported function) so it works with
+    // Turbopack, the default bundler in Next 16, which cannot serialize JS
+    // functions to its Rust core.
+    remarkPlugins: ["remark-gfm"],
+  },
 });
 
 export default withMDX(nextConfig);
