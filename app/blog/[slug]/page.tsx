@@ -88,6 +88,7 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       description: post.description,
+      url: `/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
       images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -155,7 +156,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     {post.description}
                   </p>
                   <p className="mt-6 text-sm text-[#64748B]">
-                    {formatPostDate(post.date)} · {post.readingTime}
+                    By{" "}
+                    <a
+                      href="https://www.linkedin.com/company/leviathansellers/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-[#0F172A] hover:text-[#F97316]"
+                    >
+                      Harishchandra Kevat
+                    </a>
+                    , Founder, Leviathan Sellers · {formatPostDate(post.date)} ·{" "}
+                    {post.readingTime}
                   </p>
                 </header>
                 <div className="prose prose-slate mt-10 max-w-none [&_a]:text-[#F97316] [&_a]:no-underline hover:[&_a]:text-[#EA580C] [&_h2]:text-[#0F172A] [&_h3]:text-[#0F172A] [&_p]:text-[#374151] [&_li]:text-[#374151]">

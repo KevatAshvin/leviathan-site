@@ -82,14 +82,6 @@ const websiteSchema = {
   name: "Leviathan Sellers",
   url: siteUrl,
   description: siteDescription,
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${siteUrl}/blog?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const jsonLdSchemas = [
