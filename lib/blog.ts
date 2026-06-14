@@ -8,6 +8,9 @@ import AmazonFbaReimbursementPolicy2025, {
 import FbaReimbursementAudit, {
   frontmatter as fbaReimbursementAudit,
 } from "@/content/blog/fba-reimbursement-audit.mdx";
+import FbaStorageLimitsIpiRestockStrategy2026, {
+  frontmatter as fbaStorageLimitsIpiRestockStrategy2026,
+} from "@/content/blog/fba-storage-limits-ipi-restock-strategy-2026.mdx";
 import FreeAuditPreparation, {
   frontmatter as freeAuditPreparation,
 } from "@/content/blog/free-audit-preparation.mdx";
@@ -52,6 +55,11 @@ const posts: BlogPost[] = [
     slug: "how-to-recover-amazon-fba-reimbursements-2025",
     ...howToRecoverAmazonFbaReimbursements2025,
     Component: HowToRecoverAmazonFbaReimbursements2025,
+  },
+  {
+    slug: "fba-storage-limits-ipi-restock-strategy-2026",
+    ...fbaStorageLimitsIpiRestockStrategy2026,
+    Component: FbaStorageLimitsIpiRestockStrategy2026,
   },
   {
     slug: "fba-reimbursement-audit",
