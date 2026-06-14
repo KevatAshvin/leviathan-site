@@ -32,6 +32,17 @@ export async function generateMetadata({
     };
   }
 
+  const slugKeywords: Record<string, string[]> = {
+    "fba-storage-limits-ipi-restock-strategy-2026": [
+      "amazon fba storage limits 2026",
+      "amazon ipi score 2026",
+      "fba restock strategy",
+      "fba capacity limits",
+      "amazon inventory performance index",
+      "fba storage fees 2026",
+    ],
+  };
+
   const categoryKeywords: Record<string, string[]> = {
     "AI & Automation": [
       "ai tools for amazon fba sellers",
@@ -76,11 +87,12 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    keywords: categoryKeywords[post.category] ?? [
-      "amazon fba",
-      "fba reimbursement",
-      "amazon seller",
-    ],
+    keywords: slugKeywords[slug] ??
+      categoryKeywords[post.category] ?? [
+        "amazon fba",
+        "fba reimbursement",
+        "amazon seller",
+      ],
     authors: [
       { name: "Harishchandra Kevat", url: "https://www.leviathansellers.com/about" },
     ],
