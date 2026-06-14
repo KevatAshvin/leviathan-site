@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import ChatWidget from "@/components/ChatWidget";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
@@ -157,6 +158,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </div>
+        <ChatWidget />
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
