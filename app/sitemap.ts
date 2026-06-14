@@ -5,8 +5,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.leviathanseller
 
 const today = new Date();
 
-const staleLegalDate = new Date("2026-04-01");
-
 type RouteSpec = {
   path: string;
   priority: number;
@@ -68,18 +66,6 @@ const routes: RouteSpec[] = [
     priority: 0.8,
     changeFrequency: "weekly",
     lastModified: today,
-  },
-  {
-    path: "/privacy-policy",
-    priority: 0.2,
-    changeFrequency: "yearly",
-    lastModified: staleLegalDate,
-  },
-  {
-    path: "/terms-of-service",
-    priority: 0.2,
-    changeFrequency: "yearly",
-    lastModified: staleLegalDate,
   },
 ];
 
