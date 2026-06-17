@@ -8,19 +8,6 @@ export const metadata: Metadata = {
   title: "Amazon Product Research Service — US, UK & India",
   description:
     "Data-driven Amazon product research for US, UK, and India marketplaces. Keyword demand analysis, competition depth, margin modelling, and supplier identification. Find winning products before the competition.",
-  keywords: [
-    "amazon product research service",
-    "amazon product research india",
-    "amazon fba product research",
-    "amazon winning product finder",
-    "amazon product research uk",
-    "fba product opportunity analysis",
-    "amazon niche research service",
-    "amazon competition analysis",
-    "amazon margin calculator product research",
-    "fba product launch research",
-    "amazon supplier research",
-  ],
   alternates: { canonical: "/product-research" },
   openGraph: {
     title: "Amazon Product Research Service — US, UK & India",

@@ -13,16 +13,6 @@ export const metadata: Metadata = {
   title: "Get Your Free Amazon FBA Audit",
   description:
     "Request a free Amazon FBA account audit. Our expert team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome. WhatsApp available.",
-  keywords: [
-    "free amazon fba audit",
-    "amazon fba consultation",
-    "amazon seller audit service",
-    "fba reimbursement audit free",
-    "contact amazon fba expert",
-    "amazon seller help india",
-    "free fba account review",
-    "amazon fba expert consultation",
-  ],
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Get Your Free Amazon FBA Audit",

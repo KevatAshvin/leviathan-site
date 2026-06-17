@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  description:
+    "How Leviathan Sellers collects, uses, and protects the information you share when requesting a free Amazon FBA audit or contacting us.",
   alternates: {
     canonical: "/privacy-policy",
   },

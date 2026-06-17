@@ -32,67 +32,9 @@ export async function generateMetadata({
     };
   }
 
-  const slugKeywords: Record<string, string[]> = {
-    "fba-storage-limits-ipi-restock-strategy-2026": [
-      "amazon fba storage limits 2026",
-      "amazon ipi score 2026",
-      "fba restock strategy",
-      "fba capacity limits",
-      "amazon inventory performance index",
-      "fba storage fees 2026",
-    ],
-  };
-
-  const categoryKeywords: Record<string, string[]> = {
-    "AI & Automation": [
-      "ai tools for amazon fba sellers",
-      "ai for amazon sellers 2025",
-      "amazon fba ai automation",
-      "ai amazon reimbursement tools",
-      "best ai tools for amazon sellers",
-      "ai amazon product research",
-    ],
-    "FBA Policy": [
-      "amazon fba reimbursement policy 2025",
-      "amazon fba policy changes 2025",
-      "fba claim window 60 days",
-      "amazon manufacturing cost reimbursement 2025",
-    ],
-    "FBA Reimbursements": [
-      "amazon fba reimbursement audit",
-      "fba lost inventory claim",
-      "amazon reimbursement recovery",
-      "fba missing inventory",
-    ],
-    "Audit Preparation": [
-      "amazon fba audit preparation",
-      "fba reconciliation audit",
-      "amazon seller audit",
-      "fba reimbursement checklist",
-    ],
-    "Account Health": [
-      "amazon ipi score improvement",
-      "improve amazon ipi score 2025",
-      "amazon inventory performance index",
-      "fba account health",
-    ],
-    "Settlement Reconciliation": [
-      "amazon settlement reconciliation",
-      "amazon fba settlement report",
-      "fba reconciliation guide",
-      "amazon seller settlement statement",
-    ],
-  };
-
   return {
     title: post.title,
     description: post.description,
-    keywords: slugKeywords[slug] ??
-      categoryKeywords[post.category] ?? [
-        "amazon fba",
-        "fba reimbursement",
-        "amazon seller",
-      ],
     authors: [
       { name: "Harishchandra Kevat", url: "https://www.leviathansellers.com/about" },
     ],

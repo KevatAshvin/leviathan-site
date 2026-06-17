@@ -11,28 +11,11 @@ import { getAllPosts } from "@/lib/blog";
 const siteUrl = "https://www.leviathansellers.com/";
 const title = "Amazon FBA Reimbursement Recovery Service";
 const description =
-  "Recover lost Amazon FBA reimbursements with expert daily auditing, manual claim filing, and manufacturing cost documentation. Serving FBA sellers in US, UK, India and Canada. 96% approval rate. Free audit — no obligation.";
+  "Recover lost Amazon FBA reimbursements with expert daily auditing, manual claim filing, and manufacturing cost documentation. Serving FBA sellers in US, UK, India and Canada. ~96% typical approval rate on audited claims. Free audit — no obligation.";
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: [
-    "amazon fba reimbursement recovery",
-    "fba reimbursement service",
-    "amazon fba reconciliation service",
-    "amazon reimbursement 2025",
-    "fba 60 day claim window",
-    "amazon manufacturing cost reimbursement",
-    "fba lost inventory reimbursement",
-    "amazon fba reimbursement india",
-    "amazon fba reimbursement uk",
-    "amazon seller reimbursement service",
-    "fba missing inventory claim",
-    "amazon fba audit free",
-    "fba account management",
-    "amazon product research service",
-    "amazon fba expert",
-  ],
   alternates: {
     canonical: "https://www.leviathansellers.com",
   },
@@ -61,8 +44,8 @@ export const metadata: Metadata = {
 
 const trustStats = [
   { value: "Daily", label: "Audit frequency" },
-  { value: "96%", label: "Claim approval rate" },
-  { value: "$130–$500", label: "Monthly recovery per client" },
+  { value: "~96%", label: "Typical claim approval rate*" },
+  { value: "$130–$500", label: "Typical monthly recovery per client*" },
   { value: "60-day", label: "Window tracked, every claim" },
 ];
 
@@ -136,8 +119,6 @@ const testimonials = [
     rating: 4.5,
     quote:
       "Leviathan Sellers audited our entire Amazon account and found discrepancies we had completely overlooked for months. They handle our ongoing reconciliation and consistently recover $130–$300 every month that would otherwise be lost.",
-    sourceLabel: "fellowbooks.com",
-    sourceUrl: "https://fellowbooks.com/",
     result: "$130–$300 recovered monthly",
   },
   {
@@ -194,19 +175,52 @@ const organizationReviewsJsonLd = {
   ],
 };
 
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Amazon FBA Services by Leviathan Sellers",
+  itemListElement: serviceCards.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.title,
+      description: service.body,
+      url: `https://www.leviathansellers.com${service.href}`,
+      serviceType: service.title,
+      provider: {
+        "@type": "Organization",
+        name: "Leviathan Sellers",
+        url: "https://www.leviathansellers.com",
+      },
+      areaServed: ["US", "GB", "IN", "CA"],
+    },
+  })),
+};
+
 function StarRating({ rating }: { rating: number }) {
+  // Render a precise partial fill so the stars reflect the actual numeric
+  // rating (e.g. 4.4 shows 88% of five stars filled) instead of rounding up.
+  const fillPct = `${(Math.max(0, Math.min(rating, 5)) / 5) * 100}%`;
   return (
     <div
-      className="flex items-center gap-0.5 text-[#F97316]"
-      aria-label={`Rated ${rating} out of 5 stars`}
+      className="flex items-center gap-1.5"
+      aria-label={`Rated ${rating.toFixed(1)} out of 5 stars`}
       role="img"
     >
-      {Array.from({ length: 5 }).map((_, i) => (
-        <span key={i} className="text-lg" aria-hidden="true">
-          {i < Math.floor(rating) ? "★" : i < rating ? "★" : "☆"}
+      <span
+        className="relative inline-block text-lg leading-none"
+        aria-hidden="true"
+      >
+        <span className="text-[#E2E8F0]">★★★★★</span>
+        <span
+          className="absolute inset-0 overflow-hidden whitespace-nowrap text-[#F97316]"
+          style={{ width: fillPct }}
+        >
+          ★★★★★
         </span>
-      ))}
-      <span className="ml-1.5 text-sm font-semibold text-[#64748B]">
+      </span>
+      <span className="text-sm font-semibold text-[#64748B]">
         {rating.toFixed(1)}
       </span>
     </div>
@@ -227,6 +241,12 @@ export default async function Home() {
           ),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
 
       {/* Hero */}
       <section aria-labelledby="hero-title" className="bg-white py-10 lg:py-16">
@@ -234,13 +254,13 @@ export default async function Home() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <ScrollReveal>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FED7AA] bg-[#FFF7ED] px-3 py-1 text-xs font-semibold text-[#EA580C]">
-                ⚡ 2025 Policy Update — 60-day claim window now active
+                ⚡ 2025–2026 Policy Update — 60-day claim window now active
               </span>
               <h1
                 id="hero-title"
                 className="mt-6 text-5xl font-bold leading-[1.1] tracking-tight text-[#0F172A] lg:text-6xl"
               >
-                Recover Every Dollar Amazon Owes You{" "}
+                Recover What Amazon Owes You{" "}
                 <span className="text-[#F97316]">
                   Before the 60-Day Clock Runs Out.
                 </span>
@@ -256,7 +276,7 @@ export default async function Home() {
                 ⚠️ 2025–2026 Amazon Policy Alert: Reimbursements now paid at
                 manufacturing cost, not selling price. Without accurate cost
                 documentation filed within 60 days, sellers routinely receive
-                20–50% less than they&apos;re legally owed.
+                20–50% less than they&apos;re owed.
               </aside>
               <nav
                 className="mt-8 flex flex-col gap-3 sm:flex-row"
@@ -314,6 +334,12 @@ export default async function Home() {
                 </div>
               ))}
             </div>
+            <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-[#94A3B8]">
+              *Typical results based on audited client accounts. Approval rates
+              and recovery amounts vary by account, product category, claim
+              type, and Amazon&apos;s valuation at the time of each claim. Past
+              results do not guarantee future recovery.
+            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -520,8 +546,10 @@ export default async function Home() {
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-[#64748B]">
                 We audit every shipment, track every discrepancy, and file every
-                claim before the 60-day window closes. No exceptions. The numbers
-                below are what that commitment produces.
+                claim before the 60-day window closes. The dashboard below shows
+                anonymised reconciliation data from a real managed client account
+                — representative of the work we do, not a guarantee of your own
+                results.
               </p>
             </div>
           </ScrollReveal>
@@ -561,16 +589,6 @@ export default async function Home() {
                       {t.category}
                     </p>
                   </div>
-                  {"sourceUrl" in t && t.sourceUrl ? (
-                    <a
-                      href={t.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 text-xs font-medium text-[#94A3B8] transition hover:text-[#F97316]"
-                    >
-                      {t.sourceLabel} ↗
-                    </a>
-                  ) : null}
                   <p className="mt-3 rounded-lg bg-[#FFF7ED] px-3 py-2 text-xs font-semibold text-[#EA580C]">
                     ✓ {t.result}
                   </p>

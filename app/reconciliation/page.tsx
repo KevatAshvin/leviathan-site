@@ -9,20 +9,6 @@ export const metadata: Metadata = {
   title: "Amazon FBA Reconciliation & Reimbursement Recovery",
   description:
     "Daily Amazon FBA reconciliation — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing cost documentation. Free audit for US, UK, India and Canada sellers.",
-  keywords: [
-    "amazon fba reconciliation",
-    "fba reimbursement recovery",
-    "amazon reimbursement service",
-    "fba lost inventory claim",
-    "amazon 60 day claim window",
-    "fba manufacturing cost documentation",
-    "amazon seller reimbursement",
-    "fba missing inventory reimbursement",
-    "amazon fba claim filing",
-    "fba reconciliation service india",
-    "amazon reimbursement 2025",
-    "fba damaged inventory claim",
-  ],
   alternates: { canonical: "/reconciliation" },
   openGraph: {
     title: "Amazon FBA Reconciliation & Reimbursement Recovery",

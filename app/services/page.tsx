@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: "Amazon FBA Services — Reimbursement, Account Management & Research",
   description:
     "Expert Amazon FBA services: reimbursement recovery with manual filing, daily account health management, and data-driven product research. Serving sellers in US, UK, India and Canada. Free audit with no obligation.",
-  keywords: [
-    "amazon fba services",
-    "fba reimbursement recovery service",
-    "amazon account management service",
-    "amazon product research service",
-    "fba seller services uk",
-    "amazon fba services india",
-    "amazon fba services canada",
-    "amazon seller central management",
-    "fba reconciliation service",
-    "amazon fba expert",
-  ],
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Amazon FBA Services — Reimbursement, Account Management & Research",
@@ -140,7 +128,7 @@ const comparisonRows = [
   ["Denial appeals", "✓ Included", "✘ Limited or none", "Manual only"],
   ["60-day window compliance", "✓ Guaranteed", "Partial — often misses", "✘ Frequently missed"],
   ["Amazon TOS risk", "✓ Zero", "Some risk (bulk filing)", "Low"],
-  ["Claim approval rate", "✓ 96%+", "~60%", "Varies widely"],
+  ["Claim approval rate", "✓ ~96% typical", "~60%", "Varies widely"],
   ["Pricing model", "Performance-based only", "Monthly subscription", "Your time cost"],
   ["US, UK & India support", "✓ All three", "US primarily", "Depends on your knowledge"],
 ];

@@ -18,18 +18,6 @@ export const metadata: Metadata = {
   title: "Amazon FBA Experts — Vadodara, India",
   description:
     "Leviathan Sellers is an Amazon FBA services company founded in Vadodara, India. We help sellers in the US, UK, India and Canada recover FBA reimbursements, manage account health, and research winning products — with 100% manual expert filing.",
-  keywords: [
-    "amazon fba expert india",
-    "fba reimbursement service india",
-    "amazon seller services vadodara",
-    "amazon fba consultant india",
-    "fba account management service",
-    "amazon fba experts uk",
-    "amazon seller central expert",
-    "fba reimbursement company",
-    "leviathan sellers",
-    "amazon fba services india",
-  ],
   alternates: { canonical: "/about" },
   openGraph: {
     title: "Amazon FBA Experts — Vadodara, India",
@@ -62,8 +50,9 @@ const glanceItems = [
 
 const stats = [
   {
-    value: "96%",
-    label: "Our claim approval rate vs ~60% for automated tools",
+    value: "~96%",
+    label:
+      "Typical claim approval rate on audited client claims, vs ~60% for automated tools",
   },
   {
     value: "60",
@@ -85,7 +74,7 @@ const comparisonRows = [
   ["Denial appeals", "✓ Included", "✘ Limited or none", "Manual only"],
   ["60-day window compliance", "✓ Guaranteed", "Partial — often misses", "✘ Frequently missed"],
   ["Amazon TOS risk", "✓ Zero", "Some risk (bulk filing)", "Low"],
-  ["Claim approval rate", "✓ 96%+", "~60%", "Varies widely"],
+  ["Claim approval rate", "✓ ~96% typical", "~60%", "Varies widely"],
   ["Pricing model", "Performance-based only", "Monthly subscription", "Your time cost"],
   ["US, UK & India support", "✓ All three", "US primarily", "Depends on your knowledge"],
 ];
@@ -293,7 +282,7 @@ export default function AboutPage() {
                   id="mission-title"
                   className="mt-3 max-w-4xl text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl"
                 >
-                  We Exist to Make Sure Every Dollar Amazon Owes You Gets Paid.
+                  We Exist to Recover the Money Amazon Owes You.
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-[#374151]">
                   Amazon&apos;s fulfillment system generates discrepancies at scale.

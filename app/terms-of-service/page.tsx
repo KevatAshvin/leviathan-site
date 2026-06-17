@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
+  description:
+    "The terms governing Leviathan Sellers' Amazon FBA reconciliation, account management, and product research services, including performance-based pricing.",
   alternates: {
     canonical: "/terms-of-service",
   },

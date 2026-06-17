@@ -29,13 +29,23 @@ const officeAddress = {
 const siteDescription =
   "Expert Amazon FBA reimbursement recovery, account management and product research for sellers in US, UK, India and Canada.";
 
+const sameAsLinks = [
+  "https://www.linkedin.com/company/leviathansellers/",
+  "https://twitter.com/leviathansellers",
+  "https://www.instagram.com/leviathansellers/",
+];
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
   name: "Leviathan Sellers",
   url: siteUrl,
+  logo: `${siteUrl}/logo-icon.png`,
+  image: `${siteUrl}/og-image.png`,
   description:
     "Expert Amazon FBA reconciliation, account management and product research for sellers in US, UK, India, Canada and EU",
+  address: officeAddress,
   contactPoint: {
     "@type": "ContactPoint",
     email: contactEmail,
@@ -43,18 +53,17 @@ const organizationSchema = {
     contactType: "customer support",
   },
   areaServed: ["US", "GB", "IN", "CA", "DE", "FR", "AU"],
-  sameAs: [
-    "https://www.linkedin.com/company/leviathansellers/",
-    "https://twitter.com/leviathansellers",
-    "https://www.instagram.com/leviathansellers/",
-  ],
+  sameAs: sameAsLinks,
 };
 
-const professionalServiceSchema = {
+const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${siteUrl}/#localbusiness`,
   name: "Leviathan Sellers",
   url: siteUrl,
+  logo: `${siteUrl}/logo-icon.png`,
+  image: `${siteUrl}/og-image.png`,
   email: contactEmail,
   telephone: contactNumber,
   founder: {
@@ -75,6 +84,7 @@ const professionalServiceSchema = {
   ],
   openingHours: "Mo-Fr 09:00-18:00",
   areaServed: ["India", "United States", "United Kingdom", "Canada"],
+  sameAs: sameAsLinks,
 };
 
 const websiteSchema = {
@@ -87,7 +97,7 @@ const websiteSchema = {
 
 const jsonLdSchemas = [
   organizationSchema,
-  professionalServiceSchema,
+  localBusinessSchema,
   websiteSchema,
 ];
 

@@ -3,30 +3,14 @@ import FbaCalculator from "@/components/FbaCalculator";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const title =
-  "Free Amazon FBA Calculator 2025 | US, UK & India";
+  "Free Amazon FBA Calculator | US, UK & India";
 const description =
-  "Calculate Amazon FBA fees, referral fees, size tier costs and net profit instantly for Amazon US, UK and India. Updated 2025 fee schedules. Free — no login required.";
+  "Calculate Amazon FBA fees, referral fees, size tier costs and net profit instantly for Amazon US, UK and India. Updated 2025–2026 fee schedules. Free — no login required.";
 const url = "https://www.leviathansellers.com/fba-calculator";
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: [
-    "amazon fba calculator",
-    "amazon seller calculator",
-    "fba fee calculator",
-    "amazon seller profit calculator",
-    "amazon referral fee calculator",
-    "fba profit margin",
-    "amazon fba fees 2025",
-    "leviathansellers",
-    "amazon fba calculator uk",
-    "amazon fba calculator india",
-    "fba size tier calculator",
-    "amazon referral fee calculator uk",
-    "amazon india fba calculator",
-    "fba profit margin calculator",
-  ],
   openGraph: {
     title,
     description,

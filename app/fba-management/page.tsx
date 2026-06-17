@@ -8,19 +8,6 @@ export const metadata: Metadata = {
   title: "Amazon FBA Account Management — IPI Monitoring & Listing Health",
   description:
     "Daily IPI score monitoring, listing health management, storage optimisation, and inventory replenishment planning for Amazon FBA sellers. Expert account management for US, UK, India and Canada.",
-  keywords: [
-    "amazon fba account management",
-    "amazon ipi score monitoring",
-    "fba listing health management",
-    "amazon inventory performance index",
-    "fba storage limit management",
-    "amazon seller account management",
-    "fba account health service",
-    "amazon listing suppression fix",
-    "fba inventory replenishment planning",
-    "amazon account management india",
-    "ipi score optimisation service",
-  ],
   alternates: { canonical: "/fba-management" },
   openGraph: {
     title: "Amazon FBA Account Management — IPI Monitoring & Listing Health",
