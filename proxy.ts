@@ -12,4 +12,11 @@ export function proxy(request: NextRequest) {
   }
 }
 
-export const config = { matcher: "/((?!api|_next|favicon.ico).*)" };
+// Run only on page navigations. Exclude API routes, Next internals, and any
+// path containing a file extension (e.g. /logo-icon.png, /og-image.png,
+// /images/*.png, /sitemap.xml, /robots.txt, /favicon.ico). This is critical:
+// the next/image optimizer fetches its source image over HTTP, and if the proxy
+// intercepts that fetch it can 301-redirect it (when the internal host is not
+// "localhost"), which strips the content-type and makes the optimizer fail with
+// "The requested resource isn't a valid image ... received null".
+export const config = { matcher: "/((?!api|_next|.*\\..*).*)" };
