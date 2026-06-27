@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
+import {
+  BarChart3,
+  CircleDollarSign,
+  Clock,
+  Package,
+  Search,
+  Wallet,
+  Zap,
+} from "lucide-react";
 import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import { homeFaqs } from "@/components/faq-data";
+import DashboardLazy from "@/components/DashboardLazy";
 import HeroDashboard from "@/components/HeroDashboard";
-import ReconciliationDashboard from "@/components/ReconciliationDashboard";
 import ScrollReveal from "@/components/ScrollReveal";
 import { getAllPosts } from "@/lib/blog";
 
 const siteUrl = "https://www.leviathansellers.com/";
 const title = "Amazon FBA Reimbursement Recovery Service";
 const description =
-  "Recover lost Amazon FBA reimbursements with expert daily auditing, manual claim filing, and manufacturing cost documentation. Serving FBA sellers in US, UK, India and Canada. ~96% typical approval rate on audited claims. Free audit — no obligation.";
+  "Amazon FBA reimbursement recovery service: daily auditing, manual claim filing and manufacturing-cost documentation for US, UK, India and Canada sellers. Free audit.";
 
 export const metadata: Metadata = {
   title,
@@ -51,21 +60,21 @@ const trustStats = [
 
 const problemCards = [
   {
-    icon: "📦",
+    icon: Package,
     title: "Lost inventory goes unclaimed",
     body: "Amazon's fulfillment centres process millions of transactions daily. At that scale, lost and damaged units slip through — and Amazon only fixes them if you identify and claim them within 60 days.",
     stat: "1–3% of annual revenue",
     statLabel: "lost by average FBA sellers",
   },
   {
-    icon: "⏱",
+    icon: Clock,
     title: "The 60-day window closes fast",
     body: "From January 2025, Amazon cut the claim filing window from 18 months to just 60 days. Every day without an audit, older discrepancies expire permanently — regardless of claim validity.",
     stat: "60 days",
     statLabel: "maximum claim window since Jan 2025",
   },
   {
-    icon: "💸",
+    icon: CircleDollarSign,
     title: "Manufacturing cost — not selling price",
     body: "Since March 2025, Amazon reimburses at production cost, not selling price. Without accurate COGS documentation filed with each claim, sellers routinely receive 20–50% less than they're owed.",
     stat: "20–50%",
@@ -93,19 +102,19 @@ const howSteps = [
 
 const serviceCards = [
   {
-    icon: "💰",
+    icon: Wallet,
     title: "FBA Reconciliation",
     body: "Daily auditing of every transaction. We identify, document, and manually file every valid claim before the 60-day window expires.",
     href: "/reconciliation",
   },
   {
-    icon: "📊",
+    icon: BarChart3,
     title: "FBA Account Management",
     body: "Ongoing account health monitoring, IPI score optimisation, listing management, and performance tracking to keep your metrics green.",
     href: "/fba-management",
   },
   {
-    icon: "🔍",
+    icon: Search,
     title: "Product Research",
     body: "Data-driven product discovery using demand analysis, competition assessment, and margin modelling across US, UK, and India marketplaces.",
     href: "/product-research",
@@ -138,42 +147,6 @@ const testimonials = [
     result: "Account setup & pricing strategy",
   },
 ];
-
-const organizationReviewsJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Leviathan Sellers",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.4",
-    reviewCount: "3",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Organization", name: "FellowBooks.com" },
-      reviewRating: { "@type": "Rating", ratingValue: "4.5", bestRating: "5" },
-      reviewBody:
-        "Leviathan Sellers audited our entire Amazon account and found discrepancies we had completely overlooked for months. They handle our ongoing reconciliation and consistently recover $130–$300 every month that would otherwise be lost.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Organization", name: "Golden Books" },
-      reviewRating: { "@type": "Rating", ratingValue: "4.3", bestRating: "5" },
-      reviewBody:
-        "We were losing money every month to Amazon reimbursement discrepancies we did not even know existed. Leviathan Sellers audited our full account, identified every valid claim, and recovered amounts we had written off completely.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Organization", name: "Home Utility" },
-      reviewRating: { "@type": "Rating", ratingValue: "4.4", bestRating: "5" },
-      reviewBody:
-        "Leviathan Sellers set up our entire Amazon account from scratch and made the process completely stress-free. Their pricing strategy guidance helped us position our listings correctly from day one.",
-    },
-  ],
-};
 
 const servicesJsonLd = {
   "@context": "https://schema.org",
@@ -235,15 +208,6 @@ export default async function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationReviewsJsonLd).replace(
-            /</g,
-            "\\u003c",
-          ),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
           __html: JSON.stringify(servicesJsonLd).replace(/</g, "\\u003c"),
         }}
       />
@@ -254,7 +218,8 @@ export default async function Home() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <ScrollReveal>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FED7AA] bg-[#FFF7ED] px-3 py-1 text-xs font-semibold text-[#EA580C]">
-                ⚡ 2025–2026 Policy Update — 60-day claim window now active
+                <Zap className="h-3.5 w-3.5" aria-hidden="true" /> 2025–2026
+                Policy Update — 60-day claim window now active
               </span>
               <h1
                 id="hero-title"
@@ -266,11 +231,13 @@ export default async function Home() {
                 </span>
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#475569]">
-                Most FBA sellers silently lose 1–3% of annual revenue to
-                reimbursable discrepancies they never claim. Amazon&apos;s 2025
-                policy changes slashed the claim window to just 60 days and
-                switched reimbursements to manufacturing cost — making expert
-                daily auditing essential.
+                Leviathan Sellers is a specialist Amazon FBA reimbursement
+                recovery service and FBA reconciliation service for sellers in
+                the US, UK, India and Canada. Most FBA sellers silently lose 1–3%
+                of annual revenue to reimbursable discrepancies they never claim —
+                and Amazon&apos;s 2025 policy changes slashed the claim window to
+                just 60 days and switched reimbursements to manufacturing cost,
+                making expert daily auditing essential.
               </p>
               <aside className="mt-6 rounded-xl border border-[#FDE68A] bg-[#FFFBEB] p-4 text-sm text-[#92400E]">
                 ⚠️ 2025–2026 Amazon Policy Alert: Reimbursements now paid at
@@ -369,8 +336,11 @@ export default async function Home() {
             {problemCards.map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 80}>
                 <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8F9FA] p-7">
-                  <span className="text-3xl" aria-hidden="true">
-                    {card.icon}
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF7ED]">
+                    <card.icon
+                      className="h-6 w-6 text-[#F97316]"
+                      aria-hidden="true"
+                    />
                   </span>
                   <h3 className="mt-4 text-xl font-semibold text-[#0F172A]">
                     {card.title}
@@ -447,8 +417,11 @@ export default async function Home() {
             {serviceCards.map((service, i) => (
               <ScrollReveal key={service.title} delay={i * 80}>
                 <article className="group rounded-2xl border border-[#E2E8F0] p-8 transition-all duration-200 hover:border-[#F97316] hover:shadow-lg hover:shadow-orange-50">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF7ED] text-2xl">
-                    {service.icon}
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF7ED]">
+                    <service.icon
+                      className="h-6 w-6 text-[#F97316]"
+                      aria-hidden="true"
+                    />
                   </div>
                   <h3 className="text-xl font-semibold text-[#0F172A]">
                     {service.title}
@@ -554,7 +527,7 @@ export default async function Home() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <ReconciliationDashboard />
+            <DashboardLazy />
           </ScrollReveal>
         </div>
       </section>

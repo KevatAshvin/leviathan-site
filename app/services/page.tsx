@@ -1,18 +1,31 @@
 import type { Metadata } from "next";
+import {
+  BadgeCheck,
+  BarChart3,
+  Globe,
+  Lock,
+  Mail,
+  Rocket,
+  Search,
+  Users,
+  Wallet,
+} from "lucide-react";
 import Link from "next/link";
+import FaqJsonLd from "@/components/FaqJsonLd";
+import FaqSection from "@/components/FaqSection";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const contactEmail = "service@leviathansellers.com";
 
 export const metadata: Metadata = {
-  title: "Amazon FBA Services — Reimbursement, Account Management & Research",
+  title: "Amazon FBA Services — Reimbursement, Management & Research",
   description:
-    "Expert Amazon FBA services: reimbursement recovery with manual filing, daily account health management, and data-driven product research. Serving sellers in US, UK, India and Canada. Free audit with no obligation.",
+    "Expert Amazon FBA services: reimbursement recovery, daily account-health management and data-driven product research for sellers in US, UK, India and Canada. Free audit.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Amazon FBA Services — Reimbursement, Account Management & Research",
+    title: "Amazon FBA Services — Reimbursement, Management & Research",
     description:
-      "Expert Amazon FBA services: reimbursement recovery with manual filing, daily account health management, and data-driven product research. Serving sellers in US, UK, India and Canada. Free audit with no obligation.",
+      "Expert Amazon FBA services: reimbursement recovery, daily account-health management and data-driven product research for sellers in US, UK, India and Canada. Free audit.",
     url: "/services",
     siteName: "Leviathan Sellers",
     type: "website",
@@ -20,16 +33,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amazon FBA Services — Reimbursement, Account Management & Research",
+    title: "Amazon FBA Services — Reimbursement, Management & Research",
     description:
-      "Expert Amazon FBA services: reimbursement recovery with manual filing, daily account health management, and data-driven product research. Serving sellers in US, UK, India and Canada. Free audit with no obligation.",
+      "Expert Amazon FBA services: reimbursement recovery, daily account-health management and data-driven product research for sellers in US, UK, India and Canada. Free audit.",
     images: ["/og-image.png"],
   },
 };
 
 const services = [
   {
-    icon: "💰",
+    icon: Wallet,
     title: "FBA Reconciliation & Reimbursement Recovery",
     body: "Daily auditing of every Seller Central transaction. We identify, document, and manually file every valid claim before the 60-day window closes — with full manufacturing-cost documentation as required by Amazon's 2025 policy.",
     items: [
@@ -46,7 +59,7 @@ const services = [
     href: "/reconciliation",
   },
   {
-    icon: "📊",
+    icon: BarChart3,
     title: "FBA Account Management",
     body: "Ongoing account health monitoring, IPI score optimisation, listing management, and performance analytics. We keep your FBA account healthy, compliant, and set up for growth.",
     items: [
@@ -63,7 +76,7 @@ const services = [
     href: "/fba-management",
   },
   {
-    icon: "🔍",
+    icon: Search,
     title: "Amazon Product Research",
     body: "Data-driven product discovery for Amazon US, UK and India. We analyse demand, competition, and margins to identify opportunities where the numbers justify the investment.",
     items: [
@@ -83,22 +96,22 @@ const services = [
 
 const steps = [
   {
-    icon: "📧",
+    icon: Mail,
     title: "Fill in the Audit Form",
     body: "Takes 2 minutes. Tell us about your account and what you need help with.",
   },
   {
-    icon: "🔒",
+    icon: Lock,
     title: "Grant Read-Only Access",
     body: "Invite Leviathan Sellers as a limited user in Seller Central. We cannot make changes or move funds.",
   },
   {
-    icon: "📊",
+    icon: BarChart3,
     title: "Receive Your Audit",
     body: "We analyse your account and deliver a full report showing every recoverable discrepancy within 48-72 hours.",
   },
   {
-    icon: "🚀",
+    icon: Rocket,
     title: "We Start Recovering",
     body: "Upon your approval, we begin filing claims immediately — every day, before the 60-day window expires.",
   },
@@ -106,17 +119,17 @@ const steps = [
 
 const differentiators = [
   {
-    icon: "👥",
+    icon: Users,
     title: "Personal Service, Not Automation",
     body: "Every account managed personally. No bulk automation, no bot-filed claims, no generic recommendations.",
   },
   {
-    icon: "🌍",
+    icon: Globe,
     title: "US, UK and India Expertise",
     body: "We understand specific requirements of each Amazon marketplace. India-based sellers expanding internationally and international sellers entering Amazon India are both types of clients we have supported.",
   },
   {
-    icon: "✅",
+    icon: BadgeCheck,
     title: "100% Amazon Terms Compliant",
     body: "Every action fully compliant with Amazon's current terms. No grey-hat methods, banned tools, or approaches that create account risk.",
   },
@@ -188,6 +201,34 @@ const servicesListJsonLd = {
   ],
 };
 
+const servicesFaqs = [
+  {
+    question: "Which Amazon FBA service should I start with?",
+    answer:
+      "Almost every seller should start with the free reconciliation audit. It is no-obligation, completed within 48–72 hours, and tells you exactly how much recoverable money is sitting in your account right now. From there, FBA account management makes sense if your IPI, storage limits, or listing health need ongoing attention, and product research fits when you are ready to add new SKUs. Many clients run reconciliation plus account management together.",
+  },
+  {
+    question: "Can I use one service without committing to the others?",
+    answer:
+      "Yes. Each service stands alone. Reconciliation and reimbursement recovery is 100% performance-based, so you can run it with zero fixed cost. Account management and product research are separate engagements priced on scope. There is no requirement to bundle — though they reinforce each other, because recovered cash, a healthy account, and well-chosen products compound.",
+  },
+  {
+    question: "How is pricing structured across the three services?",
+    answer:
+      "FBA reconciliation and reimbursement recovery is commission-only — you pay a percentage of what we actually recover, and nothing if we recover nothing. FBA account management is a transparent monthly retainer based on account size, SKU count, and marketplaces covered. Product research is priced per project or as a monthly retainer depending on scope. Every engagement starts with a free audit or consultation.",
+  },
+  {
+    question: "Do you work with sellers outside the United States?",
+    answer:
+      "Yes. We actively support sellers on Amazon US, UK, India and Canada, as well as EU marketplaces and Amazon Australia, with documentation and fee logic specific to each marketplace. We are based in Vadodara, India, and work with both India-based sellers expanding internationally and international sellers entering Amazon India.",
+  },
+  {
+    question: "Are your services compliant with Amazon's terms of service?",
+    answer:
+      "Completely. Every action follows Amazon's current terms exactly — no bulk-automation filing, no grey-hat tools, no shortcuts that put your account at risk. Reimbursement claims are filed manually through official Amazon channels, and account work is done with the minimum access you approve.",
+  },
+];
+
 type RelatedPost = { slug: string; category: string; title: string; description: string; readingTime: string; };
 
 const blogHighlights: RelatedPost[] = [
@@ -236,6 +277,7 @@ export default function ServicesPage() {
           __html: JSON.stringify(servicesListJsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      <FaqJsonLd faqs={servicesFaqs} />
       <main className="bg-white text-[#0F172A]">
         {/* Hero */}
         <section aria-labelledby="services-hero-title" className="bg-white py-20 lg:py-28">
@@ -309,8 +351,11 @@ export default function ServicesPage() {
                 <ScrollReveal key={service.title} delay={i * 80}>
                   <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white transition-colors hover:border-[#F97316]">
                     <div className="flex h-full flex-col p-6">
-                      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF7ED] text-2xl">
-                        {service.icon}
+                      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF7ED]">
+                        <service.icon
+                          className="h-6 w-6 text-[#F97316]"
+                          aria-hidden="true"
+                        />
                       </div>
                       <h3 className="text-xl font-semibold text-[#0F172A]">{service.title}</h3>
                       <p className="mt-4 leading-relaxed text-[#64748B]">
@@ -368,8 +413,11 @@ export default function ServicesPage() {
                     <p className="text-5xl font-bold text-[#F97316]/20">
                       {String(index + 1).padStart(2, "0")}
                     </p>
-                    <h3 className="mt-4 text-lg font-semibold text-[#0F172A]">
-                      <span className="mr-2">{step.icon}</span>
+                    <h3 className="mt-4 flex items-center gap-2 text-lg font-semibold text-[#0F172A]">
+                      <step.icon
+                        className="h-5 w-5 shrink-0 text-[#F97316]"
+                        aria-hidden="true"
+                      />
                       {step.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#64748B]">
@@ -453,8 +501,11 @@ export default function ServicesPage() {
               {differentiators.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 80}>
                   <article className="h-full rounded-2xl border border-[#E2E8F0] bg-white p-6 transition-colors hover:border-[#F97316]">
-                    <h3 className="text-xl font-semibold text-[#0F172A]">
-                      <span className="mr-2">{item.icon}</span>
+                    <h3 className="flex items-center gap-2 text-xl font-semibold text-[#0F172A]">
+                      <item.icon
+                        className="h-5 w-5 shrink-0 text-[#F97316]"
+                        aria-hidden="true"
+                      />
                       {item.title}
                     </h3>
                     <p className="mt-4 leading-relaxed text-[#64748B]">{item.body}</p>
@@ -462,6 +513,89 @@ export default function ServicesPage() {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Overview guide */}
+        <section aria-labelledby="services-guide-title" className="bg-white py-24">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <article className="space-y-12">
+                <section className="space-y-5">
+                  <h2
+                    id="services-guide-title"
+                    className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl"
+                  >
+                    A Complete Amazon FBA Service Stack — and How the Pieces Fit
+                  </h2>
+                  <p className="text-base leading-8 text-[#374151]">
+                    Leviathan Sellers is built around a simple idea: the three things
+                    that decide whether an Amazon FBA business is profitable —
+                    recovering money Amazon wrongly keeps, keeping the account
+                    operationally healthy, and choosing products with real margin —
+                    are usually handled in isolation, badly, or not at all. We treat
+                    them as one connected system. You can engage any single service,
+                    but they are designed to reinforce each other, and most sellers
+                    see the biggest gains when at least two run together.
+                  </p>
+                  <p className="text-base leading-8 text-[#374151]">
+                    The entry point is almost always a free audit. It costs nothing,
+                    carries no obligation, and turns vague worry (&ldquo;am I leaving
+                    money on the table?&rdquo;) into a concrete number you can act on.
+                  </p>
+                </section>
+
+                <section className="space-y-5">
+                  <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl">
+                    Reconciliation, Management and Research — What Each Solves
+                  </h2>
+                  <p className="text-base leading-8 text-[#374151]">
+                    Our{" "}
+                    <Link href="/reconciliation" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                      FBA reconciliation and reimbursement recovery service
+                    </Link>{" "}
+                    is the financial-recovery lane. Amazon&apos;s warehouses process
+                    billions of units a year and make mistakes at scale — lost and
+                    damaged inventory, mis-charged fees, return discrepancies. Since
+                    January 2025 you have just 60 days to claim each one, and since
+                    March 2025 every claim needs manufacturing-cost documentation.
+                    We audit daily and file each claim manually so nothing expires.
+                  </p>
+                  <p className="text-base leading-8 text-[#374151]">
+                    Our{" "}
+                    <Link href="/fba-management" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                      Amazon FBA account management service
+                    </Link>{" "}
+                    is the prevention lane. It keeps your Inventory Performance Index
+                    above the thresholds that trigger storage restrictions, resolves
+                    listing suppressions before they cost sales, and plans
+                    replenishment so you avoid both stockouts and excess-storage fees.
+                    And our{" "}
+                    <Link href="/product-research" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                      Amazon product research service
+                    </Link>{" "}
+                    is the growth lane — finding products whose unit economics survive
+                    Amazon&apos;s 2025–2026 fee structure, validated in our{" "}
+                    <Link href="/fba-calculator" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                      free FBA calculator
+                    </Link>{" "}
+                    before you commit a purchase order.
+                  </p>
+                  <p className="text-base leading-8 text-[#374151]">
+                    New to how Amazon&apos;s 2025 reimbursement rules work? Start with
+                    our deep dive on the{" "}
+                    <Link href="/blog/amazon-fba-reimbursement-policy-2025" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                      Amazon FBA reimbursement policy changes
+                    </Link>{" "}
+                    and our walkthrough of{" "}
+                    <Link href="/blog/how-to-recover-amazon-fba-reimbursements-2025" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                      how to recover Amazon FBA reimbursements
+                    </Link>
+                    .
+                  </p>
+                </section>
+              </article>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -507,6 +641,26 @@ export default function ServicesPage() {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section aria-labelledby="services-faq-title" className="bg-white py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#F97316]">
+                FAQ
+              </p>
+              <h2
+                id="services-faq-title"
+                className="mt-3 text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl"
+              >
+                Amazon FBA Services FAQ
+              </h2>
+              <div className="mt-8">
+                <FaqSection idPrefix="services" faqs={servicesFaqs} />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 

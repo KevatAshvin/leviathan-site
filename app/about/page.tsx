@@ -1,4 +1,12 @@
 import type { Metadata } from "next";
+import {
+  BarChart3,
+  ClipboardList,
+  Eye,
+  Globe,
+  Lock,
+  Target,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -17,12 +25,12 @@ Vadodara, Gujarat 390007, India`;
 export const metadata: Metadata = {
   title: "Amazon FBA Experts — Vadodara, India",
   description:
-    "Leviathan Sellers is an Amazon FBA services company founded in Vadodara, India. We help sellers in the US, UK, India and Canada recover FBA reimbursements, manage account health, and research winning products — with 100% manual expert filing.",
+    "Amazon FBA services founded by Harishchandra Kevat in Vadodara, India — helping US, UK, India and Canada sellers recover reimbursements with 100% manual expert filing.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "Amazon FBA Experts — Vadodara, India",
     description:
-      "Leviathan Sellers is an Amazon FBA services company founded in Vadodara, India. We help sellers in the US, UK, India and Canada recover FBA reimbursements, manage account health, and research winning products — with 100% manual expert filing.",
+      "Amazon FBA services founded by Harishchandra Kevat in Vadodara, India — helping US, UK, India and Canada sellers recover reimbursements with 100% manual expert filing.",
     url: "/about",
     siteName: "Leviathan Sellers",
     type: "website",
@@ -32,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Amazon FBA Experts — Vadodara, India",
     description:
-      "Leviathan Sellers is an Amazon FBA services company founded in Vadodara, India. We help sellers in the US, UK, India and Canada recover FBA reimbursements, manage account health, and research winning products — with 100% manual expert filing.",
+      "Amazon FBA services founded by Harishchandra Kevat in Vadodara, India — helping US, UK, India and Canada sellers recover reimbursements with 100% manual expert filing.",
     images: ["/og-image.png"],
   },
 };
@@ -81,32 +89,32 @@ const comparisonRows = [
 
 const values = [
   {
-    icon: "🔒",
+    icon: Lock,
     title: "Strict Compliance",
     body: "Every action follows Amazon's current TOS exactly. No grey-hat tools, no bulk automation, no shortcuts.",
   },
   {
-    icon: "📊",
+    icon: BarChart3,
     title: "Data-Driven Precision",
     body: "Decisions based on transaction data, policy documentation, and Amazon's published standards.",
   },
   {
-    icon: "🎯",
+    icon: Target,
     title: "Performance Accountability",
     body: "Reconciliation is 100% performance-based. We are incentivised to maximise your recovery.",
   },
   {
-    icon: "📋",
+    icon: ClipboardList,
     title: "Full Transparency",
     body: "Monthly statements show every claim filed and its outcome. Nothing hidden.",
   },
   {
-    icon: "🌍",
+    icon: Globe,
     title: "Global Expertise",
     body: "US, UK, India, Canada, EU — localised documentation, currency-aware claims, marketplace-specific knowledge.",
   },
   {
-    icon: "👀",
+    icon: Eye,
     title: "Daily Vigilance",
     body: "The 60-day window means every day matters. We audit daily — never weekly.",
   },
@@ -115,13 +123,26 @@ const values = [
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://www.leviathansellers.com/about#founder",
   name: "Harishchandra Kevat",
   jobTitle: "Founder & CEO",
+  url: "https://www.leviathansellers.com/about",
+  image: "https://www.leviathansellers.com/images/founder-harishchandra-kevat.png",
+  description:
+    "Harishchandra Kevat is the founder and CEO of Leviathan Sellers, an Amazon FBA reimbursement-recovery and account-management company based in Vadodara, India. He works directly with FBA sellers across the US, UK, India and Canada on reconciliation, manufacturing-cost claim documentation, IPI optimisation, and product research.",
   worksFor: {
     "@type": "Organization",
     name: "Leviathan Sellers",
     url: "https://www.leviathansellers.com",
   },
+  knowsAbout: [
+    "Amazon FBA reimbursement recovery",
+    "Amazon FBA reconciliation",
+    "Amazon Seller Central",
+    "Manufacturing-cost claim documentation",
+    "Inventory Performance Index (IPI) optimisation",
+    "Amazon product research",
+  ],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Vadodara",
@@ -226,9 +247,34 @@ export default function AboutPage() {
                     it correctly.
                   </p>
                   <p className="mt-4 leading-7 text-[#374151]">
-                    We work with sellers on Amazon US, UK, India, Canada and EU, and
-                    every claim is handled personally with full documentation.
+                    Since {founderYear} I have worked hands-on inside Amazon Seller
+                    Central — auditing transactions, preparing manufacturing-cost
+                    documentation, filing reimbursement claims, appealing denials,
+                    and managing account health for sellers on Amazon US, UK, India,
+                    Canada and the EU. Every claim is handled personally, with full
+                    documentation, and every recommendation is grounded in real
+                    transaction data rather than generic advice.
                   </p>
+                  <div className="mt-6">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#64748B]">
+                      Areas of expertise
+                    </p>
+                    <ul className="mt-3 grid grid-cols-1 gap-2 text-sm leading-6 text-[#374151] sm:grid-cols-2">
+                      {[
+                        "FBA reimbursement recovery & reconciliation",
+                        "Manufacturing-cost claim documentation",
+                        "Denial analysis & appeals",
+                        "IPI score & account-health optimisation",
+                        "Amazon Seller Central compliance",
+                        "Product research across US, UK & India",
+                      ].map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="font-bold text-[#F97316]">✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <a
                       href={whatsappUrl}
@@ -301,12 +347,20 @@ export default function AboutPage() {
                   in your account is fully compliant with Amazon&apos;s current terms.
                   Your account health is never at risk from our work.
                 </p>
-                <Link
-                  href="/reconciliation"
-                  className="mt-8 inline-flex text-sm font-semibold text-[#F97316] hover:text-[#EA580C]"
-                >
-                  How Reconciliation Works →
-                </Link>
+                <p className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+                  <Link
+                    href="/services"
+                    className="inline-flex text-sm font-semibold text-[#F97316] hover:text-[#EA580C]"
+                  >
+                    Explore our Amazon FBA services →
+                  </Link>
+                  <Link
+                    href="/reconciliation"
+                    className="inline-flex text-sm font-semibold text-[#F97316] hover:text-[#EA580C]"
+                  >
+                    How Reconciliation Works →
+                  </Link>
+                </p>
               </article>
             </ScrollReveal>
 
@@ -357,8 +411,11 @@ export default function AboutPage() {
               {values.slice(0, 4).map((value, i) => (
                 <ScrollReveal key={value.title} delay={i * 80}>
                   <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8F9FA] p-6">
-                    <h3 className="text-lg font-semibold text-[#0F172A]">
-                      <span className="mr-2" aria-hidden="true">{value.icon}</span>
+                    <h3 className="flex items-center gap-2 text-lg font-semibold text-[#0F172A]">
+                      <value.icon
+                        className="h-5 w-5 shrink-0 text-[#F97316]"
+                        aria-hidden="true"
+                      />
                       {value.title}
                     </h3>
                     <p className="mt-4 leading-7 text-[#64748B]">{value.body}</p>
@@ -370,8 +427,11 @@ export default function AboutPage() {
               {values.slice(4).map((value, i) => (
                 <ScrollReveal key={value.title} delay={(i + 4) * 80}>
                   <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8F9FA] p-6">
-                    <h3 className="text-lg font-semibold text-[#0F172A]">
-                      <span className="mr-2" aria-hidden="true">{value.icon}</span>
+                    <h3 className="flex items-center gap-2 text-lg font-semibold text-[#0F172A]">
+                      <value.icon
+                        className="h-5 w-5 shrink-0 text-[#F97316]"
+                        aria-hidden="true"
+                      />
                       {value.title}
                     </h3>
                     <p className="mt-4 leading-7 text-[#64748B]">{value.body}</p>

@@ -1,4 +1,19 @@
 import type { Metadata } from "next";
+import {
+  AlertTriangle,
+  Ban,
+  BarChart3,
+  Bot,
+  FileText,
+  Package,
+  RotateCcw,
+  Settings,
+  TrendingUp,
+  Truck,
+  Trash2,
+  Upload,
+  Wallet,
+} from "lucide-react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReconciliationFaq from "./ReconciliationFaq";
@@ -8,12 +23,12 @@ const contactEmail = "service@leviathansellers.com";
 export const metadata: Metadata = {
   title: "Amazon FBA Reconciliation & Reimbursement Recovery",
   description:
-    "Daily Amazon FBA reconciliation — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing cost documentation. Free audit for US, UK, India and Canada sellers.",
+    "Amazon FBA reconciliation service — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing-cost documentation. Free audit.",
   alternates: { canonical: "/reconciliation" },
   openGraph: {
     title: "Amazon FBA Reconciliation & Reimbursement Recovery",
     description:
-      "Daily Amazon FBA reconciliation — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing cost documentation. Free audit for US, UK, India and Canada sellers.",
+      "Amazon FBA reconciliation service — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing-cost documentation. Free audit.",
     url: "/reconciliation",
     siteName: "Leviathan Sellers",
     type: "website",
@@ -23,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Amazon FBA Reconciliation & Reimbursement Recovery",
     description:
-      "Daily Amazon FBA reconciliation — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing cost documentation. Free audit for US, UK, India and Canada sellers.",
+      "Amazon FBA reconciliation service — every valid reimbursement claim filed manually within the 60-day window, with full manufacturing-cost documentation. Free audit.",
     images: ["/og-image.png"],
   },
 };
@@ -77,17 +92,17 @@ const serviceJsonLd = {
 
 const problems = [
   {
-    icon: "🚫",
+    icon: Ban,
     title: "Claims Expire Permanently",
     body: "After 60 days, every unclaimed discrepancy is gone. Amazon will not accept late filings under any circumstances.",
   },
   {
-    icon: "📄",
+    icon: FileText,
     title: "Documentation Is Now Required",
     body: "Manufacturing cost evidence must be accurate and current. Generic or missing documentation leads to underpayment or outright denial.",
   },
   {
-    icon: "🤖",
+    icon: Bot,
     title: "Automation Tools Are Increasingly Rejected",
     body: "Bulk-submission bots cannot prepare the tailored documentation Amazon now requires.",
   },
@@ -104,37 +119,37 @@ const recoveryRows = [
 
 const recoverItems = [
   {
-    icon: "🚫",
+    icon: Ban,
     title: "Lost Inventory",
     body: "Units checked into an FBA centre but not reflected in inventory. Amazon is responsible for all units received.",
     note: "One of the largest claim categories",
   },
   {
-    icon: "🚧",
+    icon: AlertTriangle,
     title: "Damaged in Warehouse",
     body: "Items damaged by Amazon employees or equipment during storage or fulfillment.",
     note: "Requires documentation of unit value",
   },
   {
-    icon: "↩️",
+    icon: RotateCcw,
     title: "Return Discrepancies",
     body: "Customer returns not checked back into sellable inventory or not reimbursed.",
     note: "High frequency, lower per-unit value",
   },
   {
-    icon: "⚙️",
+    icon: Settings,
     title: "Fee Overcharges",
     body: "Wrong weight/dimensions, incorrect category assignment, duplicate fulfillment fee charges.",
     note: "Ongoing — Amazon measurements drift",
   },
   {
-    icon: "🚛",
+    icon: Truck,
     title: "Inbound Shipment Shortfalls",
     body: "Units tracked to an FBA centre but not checked in correctly during receiving.",
     note: "Common for high-volume shippers",
   },
   {
-    icon: "🗑️",
+    icon: Trash2,
     title: "Removal & Disposal Errors",
     body: "Removal orders not returned correctly, disposal quantities not matching instructions.",
     note: "Often missed in standard audits",
@@ -143,22 +158,22 @@ const recoverItems = [
 
 const processSteps = [
   {
-    icon: "📊",
+    icon: BarChart3,
     title: "Daily Audit",
     body: "Every transaction reviewed daily — shipments, returns, fees, removals, disposals. No discrepancy expires without being identified.",
   },
   {
-    icon: "📄",
+    icon: FileText,
     title: "Documentation Preparation",
     body: "For each valid claim, we prepare tailored manufacturing-cost documentation and supporting evidence meeting Amazon's 2025 policy requirements exactly.",
   },
   {
-    icon: "📤",
+    icon: Upload,
     title: "Individual Manual Filing",
     body: "Claims are filed one by one through Amazon's official channels. No bulk automation. Each claim formatted, documented, and submitted individually.",
   },
   {
-    icon: "💰",
+    icon: Wallet,
     title: "Approval & Appeals",
     body: "Approved claims credited directly to your Seller Central account. Denied claims reviewed and re-filed with strengthened evidence. Monthly reports keep you fully informed.",
   },
@@ -211,17 +226,17 @@ const resultStats = [
 
 const audienceCards = [
   {
-    icon: "📦",
+    icon: Package,
     title: "You Send 100+ Units to FBA Monthly",
     body: "At this volume, inbound shortfalls and lost inventory become statistically inevitable.",
   },
   {
-    icon: "📈",
+    icon: TrendingUp,
     title: "You Have Never Run a Full Reconciliation Audit",
     body: "Most sellers who have never audited find 6–18 months of accumulated discrepancies.",
   },
   {
-    icon: "⚠️",
+    icon: AlertTriangle,
     title: "You Are Affected by the 2025 Policy Change",
     body: "If filing claims without accurate manufacturing cost documentation since March 2025, you are receiving 20–50% less than Amazon owes you.",
   },
@@ -429,7 +444,10 @@ export default function ReconciliationPage() {
                     className="rounded-2xl border border-[#E2E8F0] bg-white p-5 transition-colors hover:border-[#F97316]"
                   >
                     <h3 className="flex items-center gap-3 text-lg font-semibold text-[#0F172A]">
-                      <span>{item.icon}</span>
+                      <item.icon
+                        className="h-5 w-5 shrink-0 text-[#F97316]"
+                        aria-hidden="true"
+                      />
                       {item.title}
                     </h3>
                     <p className="mt-3 leading-relaxed text-[#64748B]">{item.body}</p>
@@ -480,8 +498,11 @@ export default function ReconciliationPage() {
             {recoverItems.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 80}>
                 <article className="h-full rounded-2xl border border-[#E2E8F0] bg-white p-6 transition-colors hover:border-[#F97316]">
-                  <h3 className="text-xl font-semibold text-[#0F172A]">
-                    <span className="mr-2">{item.icon}</span>
+                  <h3 className="flex items-center gap-2 text-xl font-semibold text-[#0F172A]">
+                    <item.icon
+                      className="h-5 w-5 shrink-0 text-[#F97316]"
+                      aria-hidden="true"
+                    />
                     {item.title}
                   </h3>
                   <p className="mt-3 leading-relaxed text-[#64748B]">{item.body}</p>
@@ -518,8 +539,11 @@ export default function ReconciliationPage() {
                   <p className="text-5xl font-bold text-[#F97316]/20">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-4 text-lg font-semibold text-[#0F172A]">
-                    <span className="mr-2">{step.icon}</span>
+                  <h3 className="mt-4 flex items-center gap-2 text-lg font-semibold text-[#0F172A]">
+                    <step.icon
+                      className="h-5 w-5 shrink-0 text-[#F97316]"
+                      aria-hidden="true"
+                    />
                     {step.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-[#64748B]">
@@ -614,8 +638,11 @@ export default function ReconciliationPage() {
             {audienceCards.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 80}>
                 <article className="h-full rounded-2xl border border-[#E2E8F0] bg-white p-6 transition-colors hover:border-[#F97316]">
-                  <h3 className="text-xl font-semibold text-[#0F172A]">
-                    <span className="mr-2">{item.icon}</span>
+                  <h3 className="flex items-center gap-2 text-xl font-semibold text-[#0F172A]">
+                    <item.icon
+                      className="h-5 w-5 shrink-0 text-[#F97316]"
+                      aria-hidden="true"
+                    />
                     {item.title}
                   </h3>
                   <p className="mt-4 leading-relaxed text-[#64748B]">{item.body}</p>
@@ -642,6 +669,98 @@ export default function ReconciliationPage() {
                 with no obligation. We don&apos;t charge anything unless we recover
                 money for you.
               </p>
+            </article>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Deep content / guide */}
+      <section aria-labelledby="recon-guide-title" className="bg-white py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <article className="space-y-12">
+              <section className="space-y-5">
+                <h2
+                  id="recon-guide-title"
+                  className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl"
+                >
+                  Why FBA Reconciliation Is Now a Daily Discipline, Not a Quarterly Chore
+                </h2>
+                <p className="text-base leading-8 text-[#374151]">
+                  For years, Amazon sellers could afford to be relaxed about
+                  reimbursements. The claim window stretched back 18 months, so an
+                  annual or quarterly reconciliation caught most discrepancies in
+                  time. That era ended in January 2025. Amazon now permanently
+                  rejects most claims filed more than 60 days after the discrepancy
+                  occurs — which means a quarterly audit mathematically guarantees
+                  you forfeit the oldest two months of every cycle. A professional
+                  Amazon FBA reconciliation service is no longer a nice-to-have; it
+                  is the only way to ensure that every recoverable dollar is claimed
+                  inside the window Amazon enforces.
+                </p>
+                <p className="text-base leading-8 text-[#374151]">
+                  The second 2025 change compounds the first. Amazon shifted
+                  reimbursement valuation from estimated sale price to your
+                  manufacturing cost — and if you do not file accurate cost-of-goods
+                  documentation with each claim, Amazon substitutes its own internal
+                  estimate, frequently 30–50% below your true cost. So the modern
+                  reimbursement problem has two halves: claiming in time, and
+                  claiming at the right value. Both require evidence captured at the
+                  moment the issue occurs, not reconstructed weeks later.
+                </p>
+              </section>
+
+              <section className="space-y-5">
+                <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl">
+                  What Reimbursement Recovery Looks Like When It Is Done Properly
+                </h2>
+                <p className="text-base leading-8 text-[#374151]">
+                  Done well, reimbursement recovery is unglamorous, repetitive, and
+                  relentless. Every shipment, return, removal, and fee line is
+                  reviewed daily against what Amazon should have done. Each genuine
+                  discrepancy becomes an individually prepared claim — with the
+                  specific shipment IDs, dates, and manufacturing-cost evidence that
+                  match Amazon&apos;s current requirements — filed manually through
+                  official channels rather than blasted out as a bulk template that
+                  Amazon&apos;s systems increasingly flag and reject. Denied claims
+                  are treated as the start of an appeal, not the end of the road,
+                  because a large share of initial denials reverse when the evidence
+                  packet is rebuilt around the stated denial reason. For a fuller
+                  picture of how an audit surfaces this lost revenue, see our guide
+                  on{" "}
+                  <Link href="/blog/fba-reimbursement-audit" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                    how an FBA reimbursement audit finds lost Amazon revenue
+                  </Link>{" "}
+                  and our walkthrough of{" "}
+                  <Link href="/blog/how-to-recover-amazon-fba-reimbursements-2025" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                    how to recover Amazon FBA reimbursements in 2025
+                  </Link>
+                  .
+                </p>
+              </section>
+
+              <section className="space-y-5">
+                <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl">
+                  Reconciliation Works Best Alongside Healthy Operations
+                </h2>
+                <p className="text-base leading-8 text-[#374151]">
+                  Recovering money is only worthwhile if the account is not quietly
+                  losing it elsewhere. Clean reconciliation makes your operational
+                  metrics trustworthy, but the inventory levers themselves —
+                  Inventory Performance Index, storage limits, listing health — are
+                  managed forward through our{" "}
+                  <Link href="/fba-management" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                    Amazon FBA account management service
+                  </Link>
+                  . And when you are ready to grow the catalogue, our{" "}
+                  <Link href="/product-research" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                    Amazon product research service
+                  </Link>{" "}
+                  ensures new SKUs carry margins that survive Amazon&apos;s fees in
+                  the first place. Reconciliation recovers what was lost; together,
+                  the three services stop the leaks at the source.
+                </p>
+              </section>
             </article>
           </ScrollReveal>
         </div>

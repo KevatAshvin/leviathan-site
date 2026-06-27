@@ -4,14 +4,14 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { formatPostDate, getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Amazon FBA Seller Blog — Reimbursements, IPI & Reconciliation",
+  title: "Amazon FBA Blog — Reimbursements, IPI & Reconciliation",
   description:
-    "Practical guides for Amazon FBA sellers: reimbursement recovery, reconciliation, IPI score improvement, and account health. Updated regularly with 2025–2026 policy changes.",
+    "Practical guides for Amazon FBA sellers: reimbursement recovery, reconciliation, IPI improvement and account health — updated for 2025–2026 policy changes.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Amazon FBA Seller Blog — Reimbursements, IPI & Reconciliation",
+    title: "Amazon FBA Blog — Reimbursements, IPI & Reconciliation",
     description:
-      "Practical guides for Amazon FBA sellers: reimbursement recovery, reconciliation, IPI score improvement, and account health. Updated regularly with 2025–2026 policy changes.",
+      "Practical guides for Amazon FBA sellers: reimbursement recovery, reconciliation, IPI improvement and account health — updated for 2025–2026 policy changes.",
     url: "/blog",
     siteName: "Leviathan Sellers",
     type: "website",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amazon FBA Seller Blog — Reimbursements, IPI & Reconciliation",
+    title: "Amazon FBA Blog — Reimbursements, IPI & Reconciliation",
     description:
-      "Practical guides for Amazon FBA sellers: reimbursement recovery, reconciliation, IPI score improvement, and account health. Updated regularly with 2025–2026 policy changes.",
+      "Practical guides for Amazon FBA sellers: reimbursement recovery, reconciliation, IPI improvement and account health — updated for 2025–2026 policy changes.",
     images: ["/og-image.png"],
   },
 };

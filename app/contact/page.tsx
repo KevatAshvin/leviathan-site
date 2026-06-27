@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Clock, Globe, Mail, MapPin, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "./ContactForm";
@@ -12,12 +13,12 @@ Vadodara, Gujarat 390007, India`;
 export const metadata: Metadata = {
   title: "Get Your Free Amazon FBA Audit",
   description:
-    "Request a free Amazon FBA account audit. Our expert team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome. WhatsApp available.",
+    "Request a free Amazon FBA account audit. Our team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Get Your Free Amazon FBA Audit",
     description:
-      "Request a free Amazon FBA account audit. Our expert team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome. WhatsApp available.",
+      "Request a free Amazon FBA account audit. Our team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome.",
     url: "/contact",
     siteName: "Leviathan Sellers",
     type: "website",
@@ -27,36 +28,36 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Get Your Free Amazon FBA Audit",
     description:
-      "Request a free Amazon FBA account audit. Our expert team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome. WhatsApp available.",
+      "Request a free Amazon FBA account audit. Our team reviews your account within 48 hours — no obligation. Sellers in US, UK, India, Canada and EU welcome.",
     images: ["/og-image.png"],
   },
 };
 
 const contactRows = [
   {
-    icon: "✉",
+    icon: Mail,
     label: "Email",
     value: contactEmail,
     href: `mailto:${contactEmail}`,
   },
   {
-    icon: "🕐",
+    icon: Clock,
     label: "Response Time",
     value: "Within 24 business hours (Mon–Fri)",
   },
   {
-    icon: "🌍",
+    icon: Globe,
     label: "Marketplaces Covered",
     value:
       "US, UK, India, Canada, Germany, France, Italy, Spain, Australia",
   },
   {
-    icon: "📍",
+    icon: MapPin,
     label: "Office Address",
     value: officeAddress,
   },
   {
-    icon: "💬",
+    icon: MessageCircle,
     label: "WhatsApp / Contact",
     value: contactNumber,
     href: whatsappUrl,
@@ -170,8 +171,11 @@ export default function ContactPage() {
                   <dl className="space-y-5">
                     {contactRows.map((row) => (
                       <div key={row.label} className="flex gap-4">
-                        <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFF7ED] text-lg">
-                          {row.icon}
+                        <dt className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFF7ED]">
+                          <row.icon
+                            className="h-5 w-5 text-[#F97316]"
+                            aria-hidden="true"
+                          />
                         </dt>
                         <dd>
                           <p className="font-semibold text-[#0F172A]">{row.label}</p>

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import FbaCalculator from "@/components/FbaCalculator";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const title =
   "Free Amazon FBA Calculator | US, UK & India";
 const description =
-  "Calculate Amazon FBA fees, referral fees, size tier costs and net profit instantly for Amazon US, UK and India. Updated 2025–2026 fee schedules. Free — no login required.";
+  "Calculate Amazon FBA fees, referral fees and net profit instantly for Amazon US, UK and India. Updated 2025–2026 fee schedules. Free — no login required.";
 const url = "https://www.leviathansellers.com/fba-calculator";
 
 export const metadata: Metadata = {
@@ -240,9 +241,15 @@ export default function FbaCalculatorPage() {
                 weight can exceed actual weight — if your carton is airy, Amazon bills
                 the higher of the two, which silently adds <strong>$3–$5+</strong> per
                 unit when you slip into the wrong tier. Leviathan Sellers audits Seller
-                Central for referral and FBA fee overcharges daily as part of
-                reconciliation — so mismatches between recorded dimensions and
-                physical SKU reality get caught before they erode quarters of margin.
+                Central for referral and FBA fee overcharges daily as part of our{" "}
+                <Link
+                  href="/reconciliation"
+                  className="font-medium text-[#F97316] hover:text-[#EA580C]"
+                >
+                  FBA reconciliation and reimbursement recovery service
+                </Link>{" "}
+                — so mismatches between recorded dimensions and physical SKU reality
+                get caught before they erode quarters of margin.
               </p>
             </section>
 
@@ -356,6 +363,37 @@ export default function FbaCalculatorPage() {
               <p className="text-base leading-8 text-[#374151]">
                 Tie pricing tests back to modeled PPC percentages so headline margin
                 after ads still clears your hurdle rate.
+              </p>
+            </section>
+
+            <section className="space-y-5">
+              <h2 className="text-3xl font-bold tracking-tight text-[#0F172A]">
+                Beyond Fees: Recover the Money Amazon Already Owes You
+              </h2>
+              <p className="text-base leading-8 text-[#374151]">
+                Modelling fees protects margin going forward — but most sellers are
+                also losing money <em>backwards</em>, to overcharged FBA fees, lost
+                and damaged inventory, and return discrepancies Amazon never
+                reimburses automatically. The same dimensional-weight errors this
+                calculator helps you avoid are a common source of fee overcharges
+                that our{" "}
+                <Link href="/reconciliation" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                  FBA reconciliation and reimbursement recovery service
+                </Link>{" "}
+                catches and reclaims daily, within Amazon&apos;s 60-day window. To
+                understand exactly how that recovery works, read{" "}
+                <Link href="/blog/how-to-recover-amazon-fba-reimbursements-2025" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                  how to recover Amazon FBA reimbursements in 2025
+                </Link>{" "}
+                and our breakdown of the{" "}
+                <Link href="/blog/amazon-fba-reimbursement-policy-2025" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                  2025 Amazon FBA reimbursement policy changes
+                </Link>
+                . When you want the exact number for your account,{" "}
+                <Link href="/contact" className="font-medium text-[#F97316] hover:text-[#EA580C]">
+                  request a free audit
+                </Link>
+                .
               </p>
             </section>
           </article>

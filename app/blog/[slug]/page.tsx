@@ -66,17 +66,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const { Component } = post;
 
+  const postUrl = `https://www.leviathansellers.com/blog/${slug}`;
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { "@type": "Person", name: "Harishchandra Kevat" },
+    dateModified: post.date,
+    image: "https://www.leviathansellers.com/og-image.png",
+    url: postUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    author: {
+      "@type": "Person",
+      name: "Harishchandra Kevat",
+      url: "https://www.leviathansellers.com/about",
+    },
     publisher: {
       "@type": "Organization",
       name: "Leviathan Sellers",
       url: "https://www.leviathansellers.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.leviathansellers.com/logo-icon.png",
+      },
     },
   };
 

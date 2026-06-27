@@ -1,5 +1,6 @@
 "use client";
 
+import { BarChart3, ClipboardList, Search, Wallet } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -10,25 +11,25 @@ const servicesLinks = [
     href: "/reconciliation",
     label: "FBA Reconciliation",
     desc: "Recover lost FBA reimbursements",
-    icon: "💰",
+    icon: Wallet,
   },
   {
     href: "/fba-management",
     label: "FBA Account Management",
     desc: "IPI monitoring & listing health",
-    icon: "📊",
+    icon: BarChart3,
   },
   {
     href: "/product-research",
     label: "Product Research",
     desc: "Find winning products with data",
-    icon: "🔍",
+    icon: Search,
   },
   {
     href: "/services",
     label: "All Services →",
     desc: "See full service overview",
-    icon: "📋",
+    icon: ClipboardList,
   },
 ];
 
@@ -146,7 +147,10 @@ export default function Navbar() {
                         isActive(pathname, link.href) ? "bg-[#FFF7ED]" : ""
                       }`}
                     >
-                      <span className="mt-0.5 text-xl leading-none">{link.icon}</span>
+                      <link.icon
+                        className="mt-0.5 h-5 w-5 shrink-0 text-[#F97316]"
+                        aria-hidden="true"
+                      />
                       <span>
                         <span
                           className={`block text-sm font-semibold ${
@@ -272,7 +276,10 @@ export default function Navbar() {
                       : "text-[#374151] hover:bg-[#F8F9FA]"
                   }`}
                 >
-                  <span className="text-xl">{link.icon}</span>
+                  <link.icon
+                    className="h-5 w-5 shrink-0 text-[#F97316]"
+                    aria-hidden="true"
+                  />
                   <span>
                     <span className="block text-sm font-semibold">{link.label}</span>
                     <span className="block text-xs text-[#64748B]">{link.desc}</span>
